@@ -1,0 +1,68 @@
+header {
+  align-items: center;
+  justify-content: space-between;
+}
+
+#avatar {
+  border-radius: 50%;
+}
+
+#logo,
+#avatar {
+  width: 24px;
+  height: 24px;
+}
+
+.headerLeft {
+  align-items: center;
+  gap: var(--spacing-small);
+  flex-grow: 1;
+  margin-right: var(--spacing-small);
+}
+
+.headerRight {
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+
+.inputBox {
+  flex: 1;
+  width: 100%;
+}
+
+.inputBox,
+.basketBox {
+  position: relative;
+}
+
+.inputBox .input {
+  width: 100%;
+  height: 34px;
+  padding: 4px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+
+.inputBox .iconInput {
+  height: 14px;
+  position: absolute;
+  right: 4px;
+  top: calc(50% - 8px);
+}
+
+.iconBasket {
+  color: var(--color-primary);
+}
+
+.articoliCarrello {
+  position: absolute;
+  left: 20px;
+  background-color: var(--bg-secondary);
+  color: var(--color-white);
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  padding: 2px;
+  text-align: center;
+}

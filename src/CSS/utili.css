@@ -1,0 +1,11 @@
+.w100 {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.cursorPOINTER {
+    cursor: pointer;
+}

@@ -1,0 +1,17 @@
+:root {
+    /* bg */
+    --bg-primary: #15803D;
+    --bg-secondary: #EA580C;
+    --bg-tertiary: #F59E0B;
+    --bg-neutral: #0F172A;
+    --bg-body: #FAF8FF;
+    /* color */
+    --color-primary: #15803D;
+    --color-secondary: #EA580C;
+    --color-tertiary: #F59E0B;
+    --color-neutral: #0F172A;
+    --color-white: #fff;
+    /* spacing */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+}
