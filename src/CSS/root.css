@@ -1,6 +1,7 @@
 :root {
     /* bg */
     --bg-primary: #15803D;
+    --bg-primarylight: #91F3A4;
     --bg-secondary: #EA580C;
     --bg-tertiary: #F59E0B;
     --bg-neutral: #0F172A;
@@ -9,6 +10,7 @@
     --bg-grey: #F2F3FF;
     /* color */
     --color-primary: #15803D;
+    --color-primarylight: #91F3A4;
     --color-secondary: #EA580C;
     --color-tertiary: #F59E0B;
     --color-neutral: #0F172A;

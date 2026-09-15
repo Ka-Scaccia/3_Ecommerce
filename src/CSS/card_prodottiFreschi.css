@@ -1,0 +1,76 @@
+.cardProdottiFreschi {
+  margin: var(--spacing-medium);
+  background-color: var(--bg-grey);
+  padding: var(--spacing-medium);
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.box_prodottiFreschi:nth-child(1) {
+  flex-direction: column;
+  gap: var(--spacing-small);
+  width: fit-content;
+}
+
+.prodottiFreschi_label {
+  text-transform: uppercase;
+  background-color: var(--bg-primary);
+  padding: 6px;
+  border-radius: 10px;
+  color: var(--color-primarylight);
+  width: fit-content;
+}
+
+.prodottiFreschi_titolo {
+  font-size: 28px;
+}
+
+.prodottiFreschi_btn {
+  background-color: var(--bg-white);
+  width: fit-content;
+  padding: var(--spacing-small);
+  border-radius: 10px;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.prodottiFreschi_btn:hover {
+  text-decoration: underline;
+}
+
+.prodottiFreschi_bgGreen {
+  color: var(--color-primary);
+}
+
+.prodottiFreschi_img {
+  display: none;
+}
+
+/* responsive */
+@media screen and (min-width: 1024px) {
+  .prodottiFreschi_img {
+    display: block;
+    border-radius: 10px;
+    height: 300px;
+  }
+
+  .cardProdottiFreschi {
+    justify-content: space-between;
+  }
+
+  .box_prodottiFreschi:nth-child(1) {
+    flex-basis: 50%;
+  }
+
+  .prodottiFreschi_titolo {
+    font-size: 38px;
+  }
+
+  .prodottiFreschi_paragrafo {
+    font-size: 20px;
+  }
+
+  .prodottiFreschi_btn {
+    font-size: 18px;
+  }
+}
