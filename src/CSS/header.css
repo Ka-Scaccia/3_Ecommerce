@@ -1,6 +1,17 @@
 header {
   align-items: center;
   justify-content: space-between;
+  background-color: var(--bg-white);
+}
+
+.header {
+  padding: var(--spacing-medium);
+}
+
+h1 {
+  display: none;
+  color: var(--color-primary);
+  font-size: 18px;
 }
 
 #avatar {
@@ -15,7 +26,7 @@ header {
 
 .headerLeft {
   align-items: center;
-  gap: var(--spacing-small);
+  gap: var(--spacing-medium);
   flex-grow: 1;
   margin-right: var(--spacing-small);
 }
@@ -28,6 +39,7 @@ header {
 .inputBox {
   flex: 1;
   width: 100%;
+  max-width: 480px;
 }
 
 .inputBox,
@@ -37,17 +49,19 @@ header {
 
 .inputBox .input {
   width: 100%;
+  max-width: 480px;
   height: 34px;
-  padding: 4px;
+  padding: 6px;
   border: none;
   outline: none;
   border-radius: 4px;
+  border: 1px solid grey;
 }
 
 .inputBox .iconInput {
   height: 14px;
   position: absolute;
-  right: 4px;
+  right: var(--spacing-small);
   top: calc(50% - 8px);
 }
 
@@ -65,4 +79,43 @@ header {
   width: 15px;
   padding: 2px;
   text-align: center;
+}
+
+/* media query */
+@media screen and (min-width: 768px) {
+  .header {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    display: block;
+  }
+  #logo,
+  #avatar {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .iconBasket {
+    width: 44px;
+    height: 44px;
+  }
+
+  .articoliCarrello {
+    left: 34px;
+    height: 20px;
+    width: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .headerRight {
+    align-items: center;
+    gap: var(--spacing-large);
+  }
 }

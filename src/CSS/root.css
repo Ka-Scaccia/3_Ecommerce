@@ -5,6 +5,7 @@
     --bg-tertiary: #F59E0B;
     --bg-neutral: #0F172A;
     --bg-body: #FAF8FF;
+    --bg-white: white;
     /* color */
     --color-primary: #15803D;
     --color-secondary: #EA580C;
@@ -14,4 +15,5 @@
     /* spacing */
     --spacing-small: 10px;
     --spacing-medium: 20px;
+    --spacing-large: 30px;
 }

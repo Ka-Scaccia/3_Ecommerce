@@ -10,23 +10,28 @@ import { ShoppingBasket } from "lucide-react";
 export const Header = () => {
   return (
     <>
-      <header className="flex">
+      <header>
         {/* logo, titolo, ricerca */}
-        <div className="headerLeft flex">
-          <img src={logo} alt="logo" id="logo" className="w100" />
-          <div className="inputBox flex">
-            <input type="text" placeholder="Cerca..." className="input" />
-            <FontAwesomeIcon icon={faSearch} className="iconInput cursorPOINTER"/>
+        <div className="header flex">
+          <div className="headerLeft flex">
+            <img src={logo} alt="logo" id="logo" className="w100 cursorPOINTER" />
+            <h1>Pronto Spesa</h1>
+            <div className="inputBox flex">
+              <input type="text" placeholder="Cerca..." className="input" />
+              <FontAwesomeIcon
+                icon={faSearch}
+                className="iconInput cursorPOINTER"
+              />
+            </div>
           </div>
-        </div>
-        {/* preferiti, avatar, carrello */}
-        <div className="headerRight flex">
-          <div className="basketBox cursorPOINTER">
-            <ShoppingBasket size={28}
-            className="iconBasket" />
-            <span className="articoliCarrello">0</span>
+          {/* preferiti, avatar, carrello */}
+          <div className="headerRight flex">
+            <div className="basketBox cursorPOINTER">
+              <ShoppingBasket size={28} className="iconBasket cursorPOINTER" />
+              <span className="articoliCarrello">0</span>
+            </div>
+            <img src={avatar} alt="foto avatar" id="avatar" className="w100 cursorPOINTER" />
           </div>
-          <img src={avatar} alt="foto avatar" id="avatar" className="w100" />
         </div>
       </header>
     </>
