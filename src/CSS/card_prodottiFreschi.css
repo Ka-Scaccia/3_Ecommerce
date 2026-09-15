@@ -1,9 +1,10 @@
 .cardProdottiFreschi {
-  margin: var(--spacing-medium);
+  margin: 0 auto;
+  margin-top: var(--spacing-medium);
   background-color: var(--bg-grey);
   padding: var(--spacing-medium);
   border-radius: 10px;
-  width: fit-content;
+  width: 90%;
 }
 
 .box_prodottiFreschi:nth-child(1) {
