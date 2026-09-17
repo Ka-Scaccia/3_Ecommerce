@@ -1,0 +1,61 @@
+.menuReparti {
+  margin: 0 auto;
+  margin-top: var(--spacing-medium);
+  width: 95%;
+}
+
+.titoloMenuReparti {
+  margin-bottom: var(--spacing-small);
+}
+
+.listaMenuReparti {
+  list-style-type: none;
+  gap: var(--spacing-small);
+  flex-wrap: wrap;
+}
+
+.linkListaMenuReparti {
+  text-decoration: none;
+  margin-left: var(--spacing-small);
+  color: var(--color-neutral);
+}
+
+.linkListaMenuReparti:hover {
+  text-decoration: underline;
+}
+
+.elementoListaMenuReparti {
+  background-color: var(--bg-white);
+  width: fit-content;
+  padding: var(--spacing-small);
+  margin: var(--spacing-small) 0;
+  border-radius: 40px;
+  align-items: center;
+}
+
+.iconaListaMenuReparti.ortofrutta {
+  color: var(--color-red);
+}
+
+.iconaListaMenuReparti.macelleria {
+  color: var(--color-pink);
+}
+
+.iconaListaMenuReparti.colazione {
+  color: var(--color-brown);
+}
+
+.iconaListaMenuReparti.cantina {
+  color: var(--color-fucsia);
+}
+
+.iconaListaMenuReparti.bio {
+  color: var(--color-primary);
+}
+
+/* media query */
+@media screen and (min-width: 1024px) {
+  .listaMenuReparti {
+    gap: var(--spacing-large);
+  }
+}

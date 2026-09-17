@@ -5,18 +5,22 @@ export const Nav = () => {
     <>
       <div className="nav">
         <nav>
-          <ul className="flex">
-            <li>
-              <a href="#">Tutte le Categorie</a>
+          <ul className="listaNav flex">
+            <li className="elementoNav">
+              <a href="#"
+              className="linkNav">Tutte le Categorie</a>
             </li>
-            <li>
-              <a href="#">Freschi & Ortofrutta</a>
+            <li className="elementoNav">
+              <a href="#"
+              className="linkNav">Freschi & Ortofrutta</a>
             </li>
-            <li>
-              <a href="#">Dispensa</a>
+            <li className="elementoNav">
+              <a href="#"
+              className="linkNav">Dispensa</a>
             </li>
-            <li>
-              <a href="#">Cantina & Bevande</a>
+            <li className="elementoNav">
+              <a href="#"
+              className="linkNav">Cantina & Bevande</a>
             </li>
           </ul>
         </nav>

@@ -1,21 +1,18 @@
-a {
+.linkNav {
   text-decoration: none;
+  color: var(--color-neutral);
 }
 
-li {
+.elementoNav {
   list-style-type: none;
   flex: 0 0 auto;
 }
 
-li:hover {
+.elementoNav:hover {
   text-decoration: underline;
 }
 
-a {
-  color: var(--color-neutral);
-}
-
-ul {
+.listaNav {
   margin: 0;
   padding: 0;
   gap: var(--spacing-large);
