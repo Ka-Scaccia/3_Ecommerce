@@ -33,6 +33,7 @@
   border-radius: 10px;
   color: var(--color-primary);
   font-weight: bold;
+  text-decoration: none;
 }
 
 .prodottiFreschi_btn:hover {

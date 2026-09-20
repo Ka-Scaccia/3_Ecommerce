@@ -1,0 +1,75 @@
+.guidaSpesa {
+  margin: 0 auto;
+  width: 90%;
+  margin-top: var(--spacing-medium);
+  background-color: var(--bg-grey);
+  padding: var(--spacing-small);
+  border-radius: 10px;
+}
+
+.guidaSpesa_titolo {
+  margin-bottom: var(--spacing-small);
+  font-weight: 600;
+}
+
+.guidaSpesa_listaStep {
+  flex-direction: column;
+  list-style-type: none;
+  gap: var(--spacing-medium);
+}
+
+.elementoListaStep_testo {
+  align-items: center;
+  gap: var(--spacing-small);
+}
+
+.elementoListaStep_numero {
+  background-color: var(--bg-primary);
+  color: var(--color-white);
+  padding: var(--spacing-small);
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+}
+
+.elementoListaStep_titolo {
+  font-weight: bold;
+}
+
+.elementoListaStep_paragrafo {
+  margin-top: 4px;
+  color: var(--color-grey);
+}
+
+/* media query */
+@media screen and (min-width: 768px) {
+  .guidaSpesa_listaStep {
+    flex-direction: row;
+  }
+  .elementoListaStep_titolo {
+    font-size: 14px;
+  }
+  .elementoListaStep_paragrafo {
+    margin-left: 6px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .elementoListaStep_titolo {
+    font-size: 20px;
+  }
+  .guidaSpesa_titolo {
+    font-size: 30px;
+  }
+  .elementoListaStep_paragrafo {
+    font-size: 20px;
+  }
+  .elementoListaStep_numero {
+    font-size: 26px;
+    height: 45px;
+    width: 45px;
+  }
+  .guidaSpesa {
+    padding: var(--spacing-medium);
+  }
+}

@@ -58,4 +58,7 @@
   .listaMenuReparti {
     gap: var(--spacing-large);
   }
+  .titoloMenuReparti {
+    font-size: 30px;
+  }
 }

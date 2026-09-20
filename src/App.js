@@ -1,5 +1,6 @@
 import './App.css';
 import { Card_prodottiFreschi } from './componenti/Card_prodottiFreschi.js';
+import { GuidaSpesa } from './componenti/GuidaSpesa.js';
 import { Header } from "./componenti/Header.js";
 import { MenuReparti } from './componenti/MenuReparti.js';
 import { Nav } from "./componenti/Nav.js";
@@ -11,6 +12,7 @@ function App() {
       <Nav />
       <Card_prodottiFreschi />
       <MenuReparti />
+      <GuidaSpesa />
     </div>
   );
 }
