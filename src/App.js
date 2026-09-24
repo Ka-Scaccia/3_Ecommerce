@@ -5,6 +5,7 @@ import { Header } from "./componenti/Header.js";
 import { MenuReparti } from './componenti/MenuReparti.js';
 import { Nav } from "./componenti/Nav.js";
 import { ProdottiMigliori } from './componenti/ProdottiMigliori.js';
+import { Footer } from './componenti/Footer.js';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <MenuReparti />
       <GuidaSpesa />
       <ProdottiMigliori />
+      <Footer />
     </div>
   );
 }

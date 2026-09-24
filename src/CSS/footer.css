@@ -1,0 +1,25 @@
+footer {
+  margin: 0 auto;
+  margin-top: var(--spacing-large);
+  margin-bottom: var(--spacing-large);
+  width: 90%;
+  text-align: center;
+}
+
+.footerTop_lista {
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.footerTopLista_item {
+    color: var(--color-grey);
+    font-size: 14px;
+}
+
+.footerBottom {
+    margin-top: var(--spacing-large);
+    font-weight: 100;
+    color: var(--color-grey);
+}
