@@ -1,0 +1,83 @@
+.prodottiMigliori {
+  margin: 0 auto;
+  width: 90%;
+  margin-top: var(--spacing-large);
+  background-color: var(--bg-grey);
+  padding: var(--spacing-medium);
+}
+
+.prodottiMigliori_titolo {
+  margin-bottom: var(--spacing-medium);
+}
+
+.prodottiMigliori_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 256px), 1fr));
+  gap: var(--spacing-medium);
+}
+
+.prodottiMigliori_child {
+  background-color: var(--bg-white);
+  padding: var(--spacing-medium);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.child_img {
+  border-radius: 10px;
+  max-width: 456px;
+  object-fit: cover;
+}
+
+.child_azienda {
+  text-transform: uppercase;
+  color: var(--color-grey);
+}
+
+.child_nome {
+  font-weight: 100;
+}
+
+.childTop {
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.childBottom_prezzo {
+  justify-content: space-between;
+  margin-top: var(--spacing-small);
+}
+
+.childBottom_btn {
+  align-items: center;
+  justify-content: flex-end;
+  border: none;
+  background-color: var(--bg-primary);
+  color: var(--color-white);
+  padding: var(--spacing-small);
+  border-radius: 10px;
+  width: fit-content;
+  margin-top: var(--spacing-small);
+  align-self: flex-end;
+}
+
+.childBottom_btn:hover {
+  text-decoration: underline;
+}
+
+.childBottom_btn .btnIcon {
+  margin-right: 4px;
+}
+
+.prezzoNetto {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* media query */
+@media screen and (min-width: 425px) {
+  .child_img {
+    height: 200px;
+  }
+}

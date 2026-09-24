@@ -4,6 +4,7 @@ import { GuidaSpesa } from './componenti/GuidaSpesa.js';
 import { Header } from "./componenti/Header.js";
 import { MenuReparti } from './componenti/MenuReparti.js';
 import { Nav } from "./componenti/Nav.js";
+import { ProdottiMigliori } from './componenti/ProdottiMigliori.js';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Card_prodottiFreschi />
       <MenuReparti />
       <GuidaSpesa />
+      <ProdottiMigliori />
     </div>
   );
 }
