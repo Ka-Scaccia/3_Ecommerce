@@ -7,16 +7,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { ShoppingBasket } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   // elenco prodotti
   const prodotti = [
-    { id: 1, nome: "arance"},
-    { id: 2, nome: "mirtilli"},
-    { id: 3, nome: "olio d'oliva"},
-    { id: 4, nome: "parmigiano reggiano"},
-    { id: 5, nome: "pomodorini bio"},
-    { id: 6, nome: "salmone fresco"},
+    { id: 1, nome: "arance" },
+    { id: 2, nome: "mirtilli" },
+    { id: 3, nome: "olio d'oliva" },
+    { id: 4, nome: "parmigiano reggiano" },
+    { id: 5, nome: "pomodorini bio" },
+    { id: 6, nome: "salmone fresco" },
   ];
 
   // gestione ricerca prodotti
@@ -46,6 +47,15 @@ export const Header = () => {
     setSuggerimentoRicerca([]);
   };
 
+  // controllo input ricerca
+  const controlloInputRicerca = (e) => {
+    if (testoRicerca.trim() === "") {
+      e.preventDefault();
+      alert("Scrivi qualcosa!");
+      return;
+    }
+  };
+
   return (
     <>
       <header>
@@ -66,10 +76,13 @@ export const Header = () => {
                 className="input"
                 onChange={salvataggioTestoRicercaESuggerimenti}
               />
-              <FontAwesomeIcon
-                icon={faSearch}
-                className="iconInput cursorPOINTER"
-              />
+              <Link to="/risultati-ricerca" className="link_iconInput">
+                <FontAwesomeIcon
+                  icon={faSearch}
+                  className="iconInput cursorPOINTER"
+                  onClick={controlloInputRicerca}
+                />
+              </Link>
               {suggerimentoRicerca.length > 0 && (
                 <div className="inputBox_risultatiRicerca flex cursorPOINTER">
                   {suggerimentoRicerca.map((item) => (

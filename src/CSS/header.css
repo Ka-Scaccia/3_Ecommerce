@@ -67,6 +67,10 @@ h1 {
   top: calc(50% - 8px);
 }
 
+.link_iconInput {
+  color: var(--color-primary);
+}
+
 .iconBasket {
   color: var(--color-primary);
 }
