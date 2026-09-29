@@ -1,5 +1,5 @@
 import "../CSS/menuReparti.css";
-import { Apple, Beef, Croissant, Wine, Leaf } from "lucide-react";
+import { Apple, Beef, Croissant, Wine, Leaf, Amphora, Milk, Fish } from "lucide-react";
 
 export const MenuReparti = () => {
   return (
@@ -31,6 +31,21 @@ export const MenuReparti = () => {
             <Leaf className="iconaListaMenuReparti bio"/>
             <a href="#"
             className="linkListaMenuReparti cursorPOINTER">100% Prodotti Bio</a>
+          </li>
+          <li className="elementoListaMenuReparti flex">
+            <Amphora className="iconaListaMenuReparti condimenti"/>
+            <a href="#"
+            className="linkListaMenuReparti cursorPOINTER">Condimenti</a>
+          </li>
+          <li className="elementoListaMenuReparti flex">
+            <Milk className="iconaListaMenuReparti latticini"/>
+            <a href="#"
+            className="linkListaMenuReparti cursorPOINTER">Latticini</a>
+          </li>
+          <li className="elementoListaMenuReparti flex">
+            <Fish className="iconaListaMenuReparti pescheria"/>
+            <a href="#"
+            className="linkListaMenuReparti cursorPOINTER">Pescheria</a>
           </li>
         </ul>
       </div>

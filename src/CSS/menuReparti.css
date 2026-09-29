@@ -53,6 +53,18 @@
   color: var(--color-primary);
 }
 
+.iconaListaMenuReparti.condimenti {
+  color: var(--color-yellow);
+}
+
+.iconaListaMenuReparti.latticini {
+  color: var(--color-grey);
+}
+
+.iconaListaMenuReparti.pescheria {
+  color: var(--color-heavenly);
+}
+
 /* media query */
 @media screen and (min-width: 1024px) {
   .listaMenuReparti {
