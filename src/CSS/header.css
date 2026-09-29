@@ -40,6 +40,8 @@ h1 {
   flex: 1;
   width: 100%;
   max-width: 480px;
+  flex-direction: column;
+  position: relative;
 }
 
 .inputBox,
@@ -79,6 +81,33 @@ h1 {
   width: 20px;
   padding: 2px;
   text-align: center;
+}
+
+.inputBox_risultatiRicerca {
+  background-color: var(--bg-white);
+  width: fit-content;
+  padding: var(--spacing-small);
+  border-radius: 10px;
+  flex-direction: column;
+  gap: var(--spacing-medium);
+  position: absolute;
+  top: 40px;
+}
+
+.risultatiRicerca_box {
+  gap: var(--spacing-small);
+  width: 200px;
+  padding: var(--spacing-small);
+}
+
+.risultatiRicerca_box:hover {
+  background-color: lightgrey;
+}
+
+.risultatiRicercaBox_icona .iconInput {
+  width: 15px;
+  height: 15px;
+  color: var(--color-grey);
 }
 
 /* media query */
