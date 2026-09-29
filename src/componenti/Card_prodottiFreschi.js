@@ -1,4 +1,4 @@
-import "../CSS/card_prodottiFreschi.css";
+import "../CSS/route/home/card_prodottiFreschi.css";
 import cardProdottiFreschi from "../asset/img/card_prodottiFreschi.webp";
 
 export const Card_prodottiFreschi = () => {

@@ -1,4 +1,4 @@
-import "../CSS/prodottiMigliori.css";
+import "../CSS/route/home/prodottiMigliori.css";
 import pomodoriniBio from "../asset/img/prodotti/pomodoriniBio.webp";
 import olioOliva from "../asset/img/prodotti/olioOliva.webp";
 import parmigianoReggiano from "../asset/img/prodotti/parmigianoReggiano.webp";

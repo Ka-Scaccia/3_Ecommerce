@@ -1,4 +1,4 @@
-import "../CSS/menuReparti.css";
+import "../CSS/route/home/menuReparti.css";
 import { Apple, Beef, Croissant, Wine, Leaf, Amphora, Milk, Fish } from "lucide-react";
 
 export const MenuReparti = () => {

@@ -1,4 +1,4 @@
-import "../CSS/guidaSpesa.css";
+import "../CSS/route/home/guidaSpesa.css";
 
 export const GuidaSpesa = () => {
   return (
