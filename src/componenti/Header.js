@@ -99,7 +99,8 @@ export const Header = () => {
                       <span className="risultatiRicercaBox_icona">
                         <FontAwesomeIcon icon={faSearch} />
                       </span>
-                      <span className="risultatiRicercaBox_nome">
+                      <span className="risultatiRicercaBox_nome"
+                      onClick={controlloInputRicerca}>
                         {item.nome}
                       </span>
                     </div>
