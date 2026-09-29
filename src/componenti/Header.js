@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { ShoppingBasket } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Header = () => {
   // elenco prodotti
@@ -48,11 +48,16 @@ export const Header = () => {
   };
 
   // controllo input ricerca
+  const navigate = useNavigate();
+
   const controlloInputRicerca = (e) => {
-    if (testoRicerca.trim() === "") {
+    const ricerca = testoRicerca;
+    if (ricerca.trim() === "") {
       e.preventDefault();
       alert("Scrivi qualcosa!");
       return;
+    } else {
+      navigate("/risultati-ricerca", { state: { ricerca } });
     }
   };
 
