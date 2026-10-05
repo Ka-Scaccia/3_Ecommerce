@@ -96,6 +96,7 @@ h1 {
   gap: var(--spacing-medium);
   position: absolute;
   top: 40px;
+  flex-direction: column;
 }
 
 .risultatiRicerca_box {
