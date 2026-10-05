@@ -45,6 +45,7 @@ export const arrayProdotti = [
     prezzo: "3,12",
     prezzoKG: "2,08",
     misura: "kg",
+    reparto: "bio",
     img: arance,
   },
   {
@@ -55,6 +56,7 @@ export const arrayProdotti = [
     prezzo: "2,29",
     prezzoKG: "18,32",
     misura: "kg",
+    reparto: "ortofrutta",
     img: mirtilli,
   },
   {
@@ -65,6 +67,7 @@ export const arrayProdotti = [
     prezzo: "8,99",
     prezzoKG: "11,98",
     misura: "l",
+    reparto: "condimenti",
     img: olioOliva,
   },
   {
@@ -75,6 +78,7 @@ export const arrayProdotti = [
     prezzo: "4,79",
     prezzoKG: "19,16",
     misura: "kg",
+    reparto: "latticini",
     img: parmigianoReggiano,
   },
   {
@@ -85,6 +89,7 @@ export const arrayProdotti = [
     prezzo: "2,49",
     prezzoKG: "4,98",
     misura: "kg",
+    reparto: "bio",
     img: pomodoriniBio,
   },
   {
@@ -95,6 +100,7 @@ export const arrayProdotti = [
     prezzo: "5,90",
     prezzoKG: "19,67",
     misura: "kg",
+    reparto: "pescheria",
     img: salmoneFresco,
   },
   {
@@ -105,6 +111,7 @@ export const arrayProdotti = [
     prezzo: "8,60",
     prezzoKG: "21,50",
     misura: "kg",
+    reparto: "pescheria",
     img: trancioSalmone,
   },
   {
@@ -115,6 +122,7 @@ export const arrayProdotti = [
     prezzo: "1,49",
     prezzoKG: "7,50",
     misura: "kg",
+    reparto: "ortofrutta",
     img: avocado,
   },
   {
@@ -125,6 +133,7 @@ export const arrayProdotti = [
     prezzo: "3,40",
     prezzoKG: "6,90",
     misura: "l",
+    reparto: "cantina",
     img: birraLarger,
   },
   {
@@ -135,6 +144,7 @@ export const arrayProdotti = [
     prezzo: "3,49",
     prezzoKG: "9,97",
     misura: "kg",
+    reparto: "colazioneEforno",
     img: biscottiGoccieCioccolato,
   },
   {
@@ -145,6 +155,7 @@ export const arrayProdotti = [
     prezzo: "2,99",
     prezzoKG: "11,99",
     misura: "kg",
+    reparto: "latticini",
     img: burro,
   },
   {
@@ -155,6 +166,7 @@ export const arrayProdotti = [
     prezzo: "2,99",
     prezzoKG: "7,99",
     misura: "kg",
+    reparto: "ortofrutta",
     img: cetrioli,
   },
   {
@@ -165,6 +177,7 @@ export const arrayProdotti = [
     prezzo: "1,20",
     prezzoKG: "15,00",
     misura: "kg",
+    reparto: "colazioneEforno",
     img: cornettiVuoti,
   },
   {
@@ -175,6 +188,7 @@ export const arrayProdotti = [
     prezzo: "3,30",
     prezzoKG: "11,00",
     misura: "kg",
+    reparto: "colazioneEforno",
     img: focacciaPomodoro,
   },
   {
@@ -185,6 +199,7 @@ export const arrayProdotti = [
     prezzo: "2,79",
     prezzoKG: "14,68",
     misura: "kg",
+    reparto: "ortofrutta",
     img: foglieBasilico,
   },
   {
@@ -195,6 +210,7 @@ export const arrayProdotti = [
     prezzo: "2,49",
     prezzoKG: "6,98",
     misura: "kg",
+    reparto: "ortofrutta",
     img: fragole,
   },
   {
@@ -205,6 +221,7 @@ export const arrayProdotti = [
     prezzo: "8,45",
     prezzoKG: "16,90",
     misura: "kg",
+    reparto: "pescheria",
     img: fritturaCalamari,
   },
   {
@@ -215,6 +232,7 @@ export const arrayProdotti = [
     prezzo: "2,49",
     prezzoKG: "4,98",
     misura: "kg",
+    reparto: "bio",
     img: fusilliBio,
   },
   {
@@ -225,6 +243,7 @@ export const arrayProdotti = [
     prezzo: "6,90",
     prezzoKG: "23,00",
     misura: "kg",
+    reparto: "pescheria",
     img: gamberi,
   },
   {
@@ -235,6 +254,7 @@ export const arrayProdotti = [
     prezzo: "2,19",
     prezzoKG: "7,30",
     misura: "kg",
+    reparto: "ortofrutta",
     img: lattuga,
   },
   {
@@ -245,6 +265,7 @@ export const arrayProdotti = [
     prezzo: "2,49",
     prezzoKG: "9,96",
     misura: "kg",
+    reparto: "condimenti",
     img: maionese,
   },
   {
@@ -255,6 +276,7 @@ export const arrayProdotti = [
     prezzo: "3,20",
     prezzoKG: "9,14",
     misura: "kg",
+    reparto: "colazioneEforno",
     img: marmellataFragole,
   },
   {
@@ -265,6 +287,7 @@ export const arrayProdotti = [
     prezzo: "2,79",
     prezzoKG: "4,90",
     misura: "kg",
+    reparto: "ortofrutta",
     img: melanzane,
   },
   {
@@ -275,6 +298,7 @@ export const arrayProdotti = [
     prezzo: "2,49",
     prezzoKG: "8,90",
     misura: "kg",
+    reparto: "ortofrutta",
     img: meleGolden,
   },
   {
@@ -285,6 +309,7 @@ export const arrayProdotti = [
     prezzo: "7,90",
     prezzoKG: "19,75",
     misura: "kg",
+    reparto: "pescheria",
     img: orata,
   },
   {
@@ -295,6 +320,7 @@ export const arrayProdotti = [
     prezzo: "2,20",
     prezzoKG: "4,40",
     misura: "kg",
+    reparto: "colazioneEforno",
     img: paneIntegrale,
   },
   {
@@ -305,6 +331,7 @@ export const arrayProdotti = [
     prezzo: "2,29",
     prezzoKG: "3,27",
     misura: "kg",
+    reparto: "bio",
     img: passataPomodoroBio,
   },
   {
@@ -315,6 +342,7 @@ export const arrayProdotti = [
     prezzo: "2,99",
     prezzoKG: "5,30",
     misura: "kg",
+    reparto: "ortofrutta",
     img: pesche,
   },
   {
@@ -325,6 +353,7 @@ export const arrayProdotti = [
     prezzo: "5,45",
     prezzoKG: "10,50",
     misura: "kg",
+    reparto: "macelleria",
     img: pettoPollo,
   },
   {
@@ -335,6 +364,7 @@ export const arrayProdotti = [
     prezzo: "1,99",
     prezzoKG: "19,90",
     misura: "kg",
+    reparto: "macelleria",
     img: prosciutto,
   },
   {
@@ -345,6 +375,7 @@ export const arrayProdotti = [
     prezzo: "9,90",
     prezzoKG: "13,20",
     misura: "l",
+    reparto: "cantina",
     img: prosecco,
   },
   {
@@ -355,6 +386,7 @@ export const arrayProdotti = [
     prezzo: "2,20",
     prezzoKG: "8,20",
     misura: "kg",
+    reparto: "latticini",
     img: ricotta,
   },
   {
@@ -365,6 +397,7 @@ export const arrayProdotti = [
     prezzo: "1,79",
     prezzoKG: "17,90",
     misura: "kg",
+    reparto: "macelleria",
     img: salame,
   },
   {
@@ -375,6 +408,7 @@ export const arrayProdotti = [
     prezzo: "4,80",
     prezzoKG: "12,00",
     misura: "kg",
+    reparto: "macelleria",
     img: salsicciaFresca,
   },
   {
@@ -385,6 +419,7 @@ export const arrayProdotti = [
     prezzo: "2,29",
     prezzoKG: "22,90",
     misura: "kg",
+    reparto: "macelleria",
     img: speck,
   },
   {
@@ -395,6 +430,7 @@ export const arrayProdotti = [
     prezzo: "3,49",
     prezzoKG: "9,69",
     misura: "kg",
+    reparto: "bio",
     img: uovaBio,
   },
   {
@@ -405,6 +441,7 @@ export const arrayProdotti = [
     prezzo: "1,49",
     prezzoKG: "8,76",
     misura: "kg",
+    reparto: "latticini",
     img: yogurtGreco,
   },
 ];

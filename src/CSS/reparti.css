@@ -1,0 +1,41 @@
+.repartoElenco {
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: var(--spacing-medium);
+  width: 90%;
+  justify-content: left;
+  align-items: baseline;
+  gap: var(--spacing-medium);
+}
+
+.repartoElenco_child_img {
+  width: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.repartoElenco_box {
+  max-width: 300px;
+}
+
+.titleReparto {
+  display: block;
+  font-size: 24px;
+  margin: 0 auto;
+  margin-top: var(--spacing-medium);
+  width: 90%;
+  color: var(--color-black);
+}
+
+/* responsive */
+@media screen and (min-width: 1024px) {
+  .repartoElenco_child_img {
+    height: 350px;
+  }
+  .repartoElenco {
+    gap: var(--spacing-large);
+  }
+  .titleReparto {
+    font-size: 34px;
+  }
+}
