@@ -68,6 +68,7 @@ h1 {
 }
 
 .link_iconInput {
+  border: none;
   color: var(--color-primary);
 }
 
@@ -87,12 +88,11 @@ h1 {
   text-align: center;
 }
 
-.inputBox_risultatiRicerca {
+.risultatiRicercaSuggerimenti {
   background-color: var(--bg-white);
   width: fit-content;
   padding: var(--spacing-small);
   border-radius: 10px;
-  flex-direction: column;
   gap: var(--spacing-medium);
   position: absolute;
   top: 40px;

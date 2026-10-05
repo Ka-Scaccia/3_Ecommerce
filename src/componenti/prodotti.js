@@ -1,0 +1,415 @@
+import arance from "../asset/img/prodotti/arance.webp";
+import mirtilli from "../asset/img/prodotti/mirtilli.webp";
+import olioOliva from "../asset/img/prodotti/olioOliva.webp";
+import parmigianoReggiano from "../asset/img/prodotti/parmigianoReggiano.webp";
+import pomodoriniBio from "../asset/img/prodotti/pomodoriniBio.webp";
+import salmoneFresco from "../asset/img/prodotti/salmoneFresco.webp";
+import trancioSalmone from "../asset/img/prodotti/trancioSalmone.webp";
+import avocado from "../asset/img/prodotti/avocado.webp";
+import birraLarger from "../asset/img/prodotti/birraLarger.webp";
+import biscottiGoccieCioccolato from "../asset/img/prodotti/biscottiGoccieCioccolato.webp";
+import burro from "../asset/img/prodotti/burro.webp";
+import cetrioli from "../asset/img/prodotti/cetrioli.webp";
+import cornettiVuoti from "../asset/img/prodotti/cornettiVuoti.webp";
+import focacciaPomodoro from "../asset/img/prodotti/focacciaPomodoro.webp";
+import foglieBasilico from "../asset/img/prodotti/foglieBasilico.webp";
+import fragole from "../asset/img/prodotti/fragole.webp";
+import fritturaCalamari from "../asset/img/prodotti/fritturaCalamari.webp";
+import fusilliBio from "../asset/img/prodotti/fusilliBio.webp";
+import gamberi from "../asset/img/prodotti/gamberi.webp";
+import lattuga from "../asset/img/prodotti/lattuga.webp";
+import maionese from "../asset/img/prodotti/maionese.webp";
+import marmellataFragole from "../asset/img/prodotti/marmellataFragole.webp";
+import melanzane from "../asset/img/prodotti/melanzane.webp";
+import meleGolden from "../asset/img/prodotti/meleGolden.webp";
+import orata from "../asset/img/prodotti/orata.webp";
+import paneIntegrale from "../asset/img/prodotti/paneIntegrale.webp";
+import passataPomodoroBio from "../asset/img/prodotti/passataPomodoroBio.webp";
+import pesche from "../asset/img/prodotti/pesche.webp";
+import pettoPollo from "../asset/img/prodotti/pettoPollo.webp";
+import prosciutto from "../asset/img/prodotti/prosciutto.webp";
+import prosecco from "../asset/img/prodotti/prosecco.webp";
+import ricotta from "../asset/img/prodotti/ricotta.webp";
+import salame from "../asset/img/prodotti/salame.webp";
+import salsicciaFresca from "../asset/img/prodotti/salsicciaFresca.webp";
+import speck from "../asset/img/prodotti/speck.webp";
+import uovaBio from "../asset/img/prodotti/uovaBio.webp";
+import yogurtGreco from "../asset/img/prodotti/yogurtGreco.webp";
+
+export const arrayProdotti = [
+  {
+    id: 1,
+    nome: "arance",
+    fornitore: "Bio sicilia",
+    nomeProdotto: "Arance Tarocco I.G.P. Bio da Spremitura",
+    prezzo: "3,12",
+    prezzoKG: "2,08",
+    misura: "kg",
+    img: arance,
+  },
+  {
+    id: 2,
+    nome: "mirtilli",
+    fornitore: "Bosco trentino",
+    nomeProdotto: "Mirtilli Neri Giganti Selvatici",
+    prezzo: "2,29",
+    prezzoKG: "18,32",
+    misura: "kg",
+    img: mirtilli,
+  },
+  {
+    id: 3,
+    nome: "olio d'oliva",
+    fornitore: "Frantoio muraglia",
+    nomeProdotto: "Olio Extra Vergine 100% ITA 750ml",
+    prezzo: "8,99",
+    prezzoKG: "11,98",
+    misura: "l",
+    img: olioOliva,
+  },
+  {
+    id: 4,
+    nome: "parmigiano reggiano",
+    fornitore: "Caseificio montano",
+    nomeProdotto: "Parmigiano Reggiano DOP 24 mesi",
+    prezzo: "4,79",
+    prezzoKG: "19,16",
+    misura: "kg",
+    img: parmigianoReggiano,
+  },
+  {
+    id: 5,
+    nome: "pomodorini bio",
+    fornitore: "Pachino igp",
+    nomeProdotto: "Pomodorini Ciliegino di Pachino I.G.P.",
+    prezzo: "2,49",
+    prezzoKG: "4,98",
+    misura: "kg",
+    img: pomodoriniBio,
+  },
+  {
+    id: 6,
+    nome: "salmone fresco",
+    fornitore: "Pescheria reale",
+    nomeProdotto: "Filetto di Salmone Fresco 300gr",
+    prezzo: "5,90",
+    prezzoKG: "19,67",
+    misura: "kg",
+    img: salmoneFresco,
+  },
+  {
+    id: 7,
+    nome: "trancio di salmone",
+    fornitore: "La pescheria",
+    nomeProdotto: "Trancio di Salmone",
+    prezzo: "8,60",
+    prezzoKG: "21,50",
+    misura: "kg",
+    img: trancioSalmone,
+  },
+  {
+    id: 8,
+    nome: "avocado",
+    fornitore: "Tropico buono",
+    nomeProdotto: "Avocado Hass",
+    prezzo: "1,49",
+    prezzoKG: "7,50",
+    misura: "kg",
+    img: avocado,
+  },
+  {
+    id: 9,
+    nome: "birra larger",
+    fornitore: "Birrificio Due Ponti",
+    nomeProdotto: "Birra larger",
+    prezzo: "3,40",
+    prezzoKG: "6,90",
+    misura: "l",
+    img: birraLarger,
+  },
+  {
+    id: 10,
+    nome: "biscotti con goccie al cioccolato",
+    fornitore: "Biscotti Bontà",
+    nomeProdotto: "Biscotti al cioccolato",
+    prezzo: "3,49",
+    prezzoKG: "9,97",
+    misura: "kg",
+    img: biscottiGoccieCioccolato,
+  },
+  {
+    id: 11,
+    nome: "burro",
+    fornitore: "Burro Buono",
+    nomeProdotto: "Burro",
+    prezzo: "2,99",
+    prezzoKG: "11,99",
+    misura: "kg",
+    img: burro,
+  },
+  {
+    id: 12,
+    nome: "cetrioli",
+    fornitore: "Campo Vivo",
+    nomeProdotto: "cetrioli",
+    prezzo: "2,99",
+    prezzoKG: "7,99",
+    misura: "kg",
+    img: cetrioli,
+  },
+  {
+    id: 13,
+    nome: "cornetti vuoti",
+    fornitore: "Forno Alba",
+    nomeProdotto: "cornetti vuoti",
+    prezzo: "1,20",
+    prezzoKG: "15,00",
+    misura: "kg",
+    img: cornettiVuoti,
+  },
+  {
+    id: 14,
+    nome: "focaccia al pomodoro",
+    fornitore: "Forno della Piazza",
+    nomeProdotto: "focaccia al pomodoro",
+    prezzo: "3,30",
+    prezzoKG: "11,00",
+    misura: "kg",
+    img: focacciaPomodoro,
+  },
+  {
+    id: 15,
+    nome: "foglie basilico",
+    fornitore: "Pesto di Nonna Ada",
+    nomeProdotto: "foglie di basilico",
+    prezzo: "2,79",
+    prezzoKG: "14,68",
+    misura: "kg",
+    img: foglieBasilico,
+  },
+  {
+    id: 16,
+    nome: "fragole",
+    fornitore: "Fragolì",
+    nomeProdotto: "fragole",
+    prezzo: "2,49",
+    prezzoKG: "6,98",
+    misura: "kg",
+    img: fragole,
+  },
+  {
+    id: 17,
+    nome: "frittura calamari",
+    fornitore: "Rete del Pescatore",
+    nomeProdotto: "frittura di calamari",
+    prezzo: "8,45",
+    prezzoKG: "16,90",
+    misura: "kg",
+    img: fritturaCalamari,
+  },
+  {
+    id: 18,
+    nome: "fusilli bio",
+    fornitore: "Grani Gentili",
+    nomeProdotto: "fusilli bio",
+    prezzo: "2,49",
+    prezzoKG: "4,98",
+    misura: "kg",
+    img: fusilliBio,
+  },
+  {
+    id: 19,
+    nome: "gamberi",
+    fornitore: "Gambero d'Oro",
+    nomeProdotto: "gamberi",
+    prezzo: "6,90",
+    prezzoKG: "23,00",
+    misura: "kg",
+    img: gamberi,
+  },
+  {
+    id: 20,
+    nome: "lattuga",
+    fornitore: "Foglia Fresca",
+    nomeProdotto: "lattuga",
+    prezzo: "2,19",
+    prezzoKG: "7,30",
+    misura: "kg",
+    img: lattuga,
+  },
+  {
+    id: 21,
+    nome: "maionese",
+    fornitore: "Cucina Sincera",
+    nomeProdotto: "maionese",
+    prezzo: "2,49",
+    prezzoKG: "9,96",
+    misura: "kg",
+    img: maionese,
+  },
+  {
+    id: 22,
+    nome: "marmellata fragole",
+    fornitore: "Frutti in vasetto",
+    nomeProdotto: "marmellata di fragole",
+    prezzo: "3,20",
+    prezzoKG: "9,14",
+    misura: "kg",
+    img: marmellataFragole,
+  },
+  {
+    id: 23,
+    nome: "melanzane",
+    fornitore: "Orto verde",
+    nomeProdotto: "melanzane",
+    prezzo: "2,79",
+    prezzoKG: "4,90",
+    misura: "kg",
+    img: melanzane,
+  },
+  {
+    id: 24,
+    nome: "mele golden",
+    fornitore: "Fruttaia del sole",
+    nomeProdotto: "mele Golden",
+    prezzo: "2,49",
+    prezzoKG: "8,90",
+    misura: "kg",
+    img: meleGolden,
+  },
+  {
+    id: 25,
+    nome: "orata",
+    fornitore: "Pesca blu",
+    nomeProdotto: "orata",
+    prezzo: "7,90",
+    prezzoKG: "19,75",
+    misura: "kg",
+    img: orata,
+  },
+  {
+    id: 26,
+    nome: "pane integrale",
+    fornitore: "Pane di casa",
+    nomeProdotto: "pane integrale",
+    prezzo: "2,20",
+    prezzoKG: "4,40",
+    misura: "kg",
+    img: paneIntegrale,
+  },
+  {
+    id: 27,
+    nome: "passata pomodoro bio",
+    fornitore: "Sole in bottiglia",
+    nomeProdotto: "passata di pomodoro bio",
+    prezzo: "2,29",
+    prezzoKG: "3,27",
+    misura: "kg",
+    img: passataPomodoroBio,
+  },
+  {
+    id: 28,
+    nome: "pesche",
+    fornitore: "Orto verde",
+    nomeProdotto: "pesche",
+    prezzo: "2,99",
+    prezzoKG: "5,30",
+    misura: "kg",
+    img: pesche,
+  },
+  {
+    id: 29,
+    nome: "petto pollo",
+    fornitore: "Macelleria Rossi",
+    nomeProdotto: "petto di pollo",
+    prezzo: "5,45",
+    prezzoKG: "10,50",
+    misura: "kg",
+    img: pettoPollo,
+  },
+  {
+    id: 30,
+    nome: "prosciutto",
+    fornitore: "Salumi del borgo",
+    nomeProdotto: "prosciutto",
+    prezzo: "1,99",
+    prezzoKG: "19,90",
+    misura: "kg",
+    img: prosciutto,
+  },
+  {
+    id: 31,
+    nome: "prosecco",
+    fornitore: "Vigne del lago",
+    nomeProdotto: "prosecco",
+    prezzo: "9,90",
+    prezzoKG: "13,20",
+    misura: "l",
+    img: prosecco,
+  },
+  {
+    id: 32,
+    nome: "ricotta",
+    fornitore: "Latteria fontana",
+    nomeProdotto: "ricotta",
+    prezzo: "2,20",
+    prezzoKG: "8,20",
+    misura: "kg",
+    img: ricotta,
+  },
+  {
+    id: 33,
+    nome: "salame",
+    fornitore: "Norcineria valle",
+    nomeProdotto: "salame",
+    prezzo: "1,79",
+    prezzoKG: "17,90",
+    misura: "kg",
+    img: salame,
+  },
+  {
+    id: 34,
+    nome: "salsiccia",
+    fornitore: "La salsiccieria",
+    nomeProdotto: "salsiccia fresca",
+    prezzo: "4,80",
+    prezzoKG: "12,00",
+    misura: "kg",
+    img: salsicciaFresca,
+  },
+  {
+    id: 35,
+    nome: "speck",
+    fornitore: "Speck di montelupo",
+    nomeProdotto: "speck",
+    prezzo: "2,29",
+    prezzoKG: "22,90",
+    misura: "kg",
+    img: speck,
+  },
+  {
+    id: 36,
+    nome: "uova bio",
+    fornitore: "Uova del prato",
+    nomeProdotto: "uova bio",
+    prezzo: "3,49",
+    prezzoKG: "9,69",
+    misura: "kg",
+    img: uovaBio,
+  },
+  {
+    id: 37,
+    nome: "yogurt greco",
+    fornitore: "Yogurtia",
+    nomeProdotto: "yogurt greco",
+    prezzo: "1,49",
+    prezzoKG: "8,76",
+    misura: "kg",
+    img: yogurtGreco,
+  },
+];
+
+export const prodotti = () => {
+  // elenco prodotti
+  return <></>;
+};

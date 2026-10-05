@@ -53,7 +53,7 @@ export const ProdottiMigliori = () => {
             <div className="childBottom">
                 <div className="childBottom_prezzo flex">
                     <span className="prezzoNetto">8,99 &euro;</span>
-                    <span className="prezzoKG">11,98 &euro; /kg</span>
+                    <span className="prezzoKG">11,98 &euro; /l</span>
                 </div>
                 <button className="childBottom_btn flex cursorPOINTER">
                     <Plus size={20} className="btnIcon" />

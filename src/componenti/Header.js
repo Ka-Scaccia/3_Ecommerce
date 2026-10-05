@@ -1,3 +1,4 @@
+import { arrayProdotti } from "./prodotti";
 import "../CSS/header.css";
 import "../CSS/utili.css";
 import "../CSS/root.css";
@@ -7,19 +8,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { ShoppingBasket } from "lucide-react";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export const Header = () => {
-  // elenco prodotti
-  const prodotti = [
-    { id: 1, nome: "arance" },
-    { id: 2, nome: "mirtilli" },
-    { id: 3, nome: "olio d'oliva" },
-    { id: 4, nome: "parmigiano reggiano" },
-    { id: 5, nome: "pomodorini bio" },
-    { id: 6, nome: "salmone fresco" },
-  ];
-
   // gestione ricerca prodotti
   const [testoRicerca, setTestoRicerca] = useState("");
   const [suggerimentoRicerca, setSuggerimentoRicerca] = useState([]);
@@ -34,7 +25,7 @@ export const Header = () => {
     }
 
     // confronto con testo inserito con array oggetti prodotti
-    const filtrati = prodotti.filter((item) =>
+    const filtrati = arrayProdotti.filter((item) =>
       item.nome.toLowerCase().includes(valore.toLowerCase()),
     );
 
@@ -50,14 +41,21 @@ export const Header = () => {
   // controllo input ricerca
   const navigate = useNavigate();
 
-  const controlloInputRicerca = (e) => {
-    const ricerca = testoRicerca;
-    if (ricerca.trim() === "") {
-      e.preventDefault();
+  const eseguiRicerca = (valore = testoRicerca) => {
+    const ricerca = valore.trim();
+    if (!ricerca) {
       alert("Scrivi qualcosa!");
       return;
     } else {
-      navigate("/risultati-ricerca", { state: { ricerca } });
+      const risultati = arrayProdotti.filter((item) =>
+        item.nome.toLowerCase().includes(ricerca.toLowerCase()),
+      );
+
+      navigate("/risultati-ricerca", {
+        state: { ricerca, suggerimentoRicerca: risultati },
+      });
+
+      setSuggerimentoRicerca([]);
     }
   };
 
@@ -67,29 +65,34 @@ export const Header = () => {
         {/* logo, titolo, ricerca */}
         <div className="header flex">
           <div className="headerLeft flex">
-            <img
-              src={logo}
-              alt="logo"
-              id="logo"
-              className="w100 cursorPOINTER"
-            />
+            <Link to="/">
+              <img
+                src={logo}
+                alt="logo"
+                id="logo"
+                className="w100 cursorPOINTER"
+              />
+            </Link>
             <h1>Pronto Spesa</h1>
             <div className="inputBox flex">
               <input
                 type="text"
                 placeholder="Cerca..."
                 className="input"
+                value={testoRicerca}
                 onChange={salvataggioTestoRicercaESuggerimenti}
               />
-              <Link to="/risultati-ricerca" className="link_iconInput">
+              <button
+                className="link_iconInput"
+                onClick={() => eseguiRicerca()}
+              >
                 <FontAwesomeIcon
                   icon={faSearch}
                   className="iconInput cursorPOINTER"
-                  onClick={controlloInputRicerca}
-                />
-              </Link>
-              {suggerimentoRicerca.length > 0 && (
-                <div className="inputBox_risultatiRicerca flex cursorPOINTER">
+                ></FontAwesomeIcon>
+              </button>
+              {suggerimentoRicerca.length > 0 && suggerimentoRicerca.length < 6 && (
+                <div className="risultatiRicercaSuggerimenti flex cursorPOINTER">
                   {suggerimentoRicerca.map((item) => (
                     <div
                       className="risultatiRicerca_box flex"
@@ -100,7 +103,7 @@ export const Header = () => {
                         <FontAwesomeIcon icon={faSearch} />
                       </span>
                       <span className="risultatiRicercaBox_nome"
-                      onClick={controlloInputRicerca}>
+                      >
                         {item.nome}
                       </span>
                     </div>

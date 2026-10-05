@@ -1,0 +1,20 @@
+.testoRicerca,
+.numeroRisultati {
+  color: var(--color-primary);
+}
+
+.head {
+  margin: 0 auto;
+  margin-top: var(--spacing-medium);
+  width: 90%;
+}
+
+.risultatiRicerca {
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: var(--spacing-medium);
+  width: 90%;
+  justify-content: left;
+  align-items: baseline;
+  gap: var(--spacing-medium);
+}
