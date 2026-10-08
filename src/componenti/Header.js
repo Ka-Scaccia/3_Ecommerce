@@ -10,7 +10,7 @@ import { ShoppingBasket } from "lucide-react";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-export const Header = () => {
+export const Header = ({ countCarrello, setCountCarrello}) => {
   // gestione ricerca prodotti
   const [testoRicerca, setTestoRicerca] = useState("");
   const [suggerimentoRicerca, setSuggerimentoRicerca] = useState([]);
@@ -116,7 +116,7 @@ export const Header = () => {
           <div className="headerRight flex">
             <div className="basketBox cursorPOINTER">
               <ShoppingBasket size={28} className="iconBasket cursorPOINTER" />
-              <span className="articoliCarrello">0</span>
+              <span className="articoliCarrello">{countCarrello}</span>
             </div>
             <img
               src={avatar}

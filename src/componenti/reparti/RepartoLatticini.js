@@ -2,7 +2,34 @@ import "../../CSS/reparti.css";
 import { arrayProdotti } from "../prodotti";
 import { Plus } from "lucide-react";
 
-export const RepartoLatticini = () => {
+export const RepartoLatticini = ({
+  countCarrello,
+  setCountCarrello,
+  prodottiCarrello,
+  setProdottiCarrello,
+}) => {
+  const incrementoProdottiCarrello = (nuovoProdotto) => {
+    const prodottoGiaPresente = prodottiCarrello.some(
+      (prodottoNelCarrello) => prodottoNelCarrello.nome === nuovoProdotto.nome
+    );
+
+    if (prodottoGiaPresente) {
+      alert("Questo prodotto è già presente nel carrello.");
+      return;
+    }
+
+    if (countCarrello >= 10) {
+      alert("Hai raggiunto il limite massimo di 10 prodotti.");
+      return;
+    }
+
+    setProdottiCarrello((prodottiAttuali) => [
+      ...prodottiAttuali,
+      nuovoProdotto,
+    ]);
+    setCountCarrello((numeroAttuale) => numeroAttuale + 1);
+  };
+
   return (
     <>
       <h1 className="titleReparto">Reparto Latticini</h1>
@@ -27,7 +54,15 @@ export const RepartoLatticini = () => {
                     {prodotto.prezzoKG} &euro; / {prodotto.misura}
                   </span>
                 </div>
-                <button className="childBottom_btn flex cursorPOINTER">
+                <button
+                  className="childBottom_btn flex cursorPOINTER"
+                  onClick={() =>
+                    incrementoProdottiCarrello({
+                      nome: prodotto.nomeProdotto,
+                      prezzo: Number(prodotto.prezzo.replace(",", ".")),
+                    })
+                  }
+                >
                   <Plus size={20} className="btnIcon" />
                   <span className="btnText">Aggiungi</span>
                 </button>

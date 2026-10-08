@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export const MenuReparti = () => {
+export const MenuReparti = ({ prodottiCarrello, setProdottiCarrello }) => {
   return (
     <>
       <div className="menuReparti">
@@ -28,43 +28,64 @@ export const MenuReparti = () => {
           </li>
           <li className="elementoListaMenuReparti flex">
             <Beef className="iconaListaMenuReparti macelleria" />
-            <Link to="/reparto-macelleria" className="linkListaMenuReparti cursorPOINTER">
+            <Link
+              to="/reparto-macelleria"
+              className="linkListaMenuReparti cursorPOINTER"
+            >
               Macelleria & Salumi
             </Link>
           </li>
           <li className="elementoListaMenuReparti flex">
             <Croissant className="iconaListaMenuReparti colazione" />
-            <Link to="/reparto-colazioneEforno" className="linkListaMenuReparti cursorPOINTER">
+            <Link
+              to="/reparto-colazioneEforno"
+              className="linkListaMenuReparti cursorPOINTER"
+            >
               Colazione & Forno
             </Link>
           </li>
           <li className="elementoListaMenuReparti flex">
             <Wine className="iconaListaMenuReparti cantina" />
-            <Link to="/reparto-cantina" className="linkListaMenuReparti cursorPOINTER">
+            <Link
+              to="/reparto-cantina"
+              className="linkListaMenuReparti cursorPOINTER"
+            >
               Cantina & Birre
             </Link>
           </li>
           <li className="elementoListaMenuReparti flex">
             <Leaf className="iconaListaMenuReparti bio" />
-            <Link to="/reparto-bio" className="linkListaMenuReparti cursorPOINTER">
+            <Link
+              to="/reparto-bio"
+              className="linkListaMenuReparti cursorPOINTER"
+            >
               100% Prodotti Bio
             </Link>
           </li>
           <li className="elementoListaMenuReparti flex">
             <Amphora className="iconaListaMenuReparti condimenti" />
-            <Link to="/reparto-condimenti" className="linkListaMenuReparti cursorPOINTER">
+            <Link
+              to="/reparto-condimenti"
+              className="linkListaMenuReparti cursorPOINTER"
+            >
               Condimenti
             </Link>
           </li>
           <li className="elementoListaMenuReparti flex">
             <Milk className="iconaListaMenuReparti latticini" />
-            <Link to="/reparto-latticini" className="linkListaMenuReparti cursorPOINTER">
+            <Link
+              to="/reparto-latticini"
+              className="linkListaMenuReparti cursorPOINTER"
+            >
               Latticini
             </Link>
           </li>
           <li className="elementoListaMenuReparti flex">
             <Fish className="iconaListaMenuReparti pescheria" />
-            <Link to="/reparto-pescheria" className="linkListaMenuReparti cursorPOINTER">
+            <Link
+              to="/reparto-pescheria"
+              className="linkListaMenuReparti cursorPOINTER"
+            >
               Pescheria
             </Link>
           </li>

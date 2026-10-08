@@ -5,15 +5,47 @@ import parmigianoReggiano from "../asset/img/prodotti/parmigianoReggiano.webp";
 import salmoneFresco from "../asset/img/prodotti/salmoneFresco.webp";
 import arance from "../asset/img/prodotti/arance.webp";
 import mirtilli from "../asset/img/prodotti/mirtilli.webp";
-import { Plus } from 'lucide-react';
+import { Plus } from "lucide-react";
 
-export const ProdottiMigliori = () => {
+export const ProdottiMigliori = ({
+  numProdotti,
+  setNumProdotti,
+  prodottiCarrello,
+  setProdottiCarrello,
+}) => {
+  // incremento prodotti carrello
+  const incrementoProdottiCarrello = (nuovoProdotto) => {
+    // se un prodotto è già presente nel carrello non aggiungerlo
+    const prodottoGiaPresente = prodottiCarrello.some(
+      (prodotto) => prodotto.nome === nuovoProdotto.nome
+    );
+
+    if (prodottoGiaPresente) {
+      alert("Questo prodotto è già presente nel carrello.");
+      return;
+    }
+
+    // limite massimo carrello
+    if (numProdotti >= 10) {
+      alert("Hai raggiunto il limite massimo di 10 prodotti.");
+      return;
+    }
+
+    // aggiungo prodotto se non è stato già aggiunto
+    setProdottiCarrello((prodottiAttuali) => [
+      ...prodottiAttuali,
+      nuovoProdotto,
+    ]);
+    
+    // incremento num carrello
+    setNumProdotti((numAttuale) => numAttuale + 1);
+  };
   return (
     <>
       <div className="prodottiMigliori">
         <h2 className="prodottiMigliori_titolo">I prodotti migliori</h2>
         <div className="prodottiMigliori_container">
-            {/* 1 / 6 */}
+          {/* 1 / 6 */}
           <div className="prodottiMigliori_child flex">
             <div className="childTop flex">
               <img
@@ -27,17 +59,25 @@ export const ProdottiMigliori = () => {
               </h2>
             </div>
             <div className="childBottom">
-                <div className="childBottom_prezzo flex">
-                    <span className="prezzoNetto">2,49 &euro;</span>
-                    <span className="prezzoKG">4,98 &euro; /kg</span>
-                </div>
-                <button className="childBottom_btn flex cursorPOINTER">
-                    <Plus size={20} className="btnIcon" />
-                    <span className="btnText">Aggiungi</span>
-                </button>
+              <div className="childBottom_prezzo flex">
+                <span className="prezzoNetto">2,49 &euro;</span>
+                <span className="prezzoKG">4,98 &euro; /kg</span>
+              </div>
+              <button
+                className="childBottom_btn flex cursorPOINTER"
+                onClick={() =>
+                  incrementoProdottiCarrello({
+                    nome: "Pomodorini Ciliegino di Pachino I.G.P.",
+                    prezzo: 2.49,
+                  })
+                }
+              >
+                <Plus size={20} className="btnIcon" />
+                <span className="btnText">Aggiungi</span>
+              </button>
             </div>
           </div>
-            {/* 2 / 6 */}
+          {/* 2 / 6 */}
           <div className="prodottiMigliori_child flex">
             <div className="childTop flex">
               <img
@@ -46,22 +86,28 @@ export const ProdottiMigliori = () => {
                 className="child_img w100"
               />
               <h3 className="child_azienda">franotoio muraglia</h3>
-              <h2 className="child_nome">
-                Olio Extra Vergine 100% ITA 750ml
-              </h2>
+              <h2 className="child_nome">Olio Extra Vergine 100% ITA 750ml</h2>
             </div>
             <div className="childBottom">
-                <div className="childBottom_prezzo flex">
-                    <span className="prezzoNetto">8,99 &euro;</span>
-                    <span className="prezzoKG">11,98 &euro; /l</span>
-                </div>
-                <button className="childBottom_btn flex cursorPOINTER">
-                    <Plus size={20} className="btnIcon" />
-                    <span className="btnText">Aggiungi</span>
-                </button>
+              <div className="childBottom_prezzo flex">
+                <span className="prezzoNetto">8,99 &euro;</span>
+                <span className="prezzoKG">11,98 &euro; /l</span>
+              </div>
+              <button
+                className="childBottom_btn flex cursorPOINTER"
+                onClick={() =>
+                  incrementoProdottiCarrello({
+                    nome: "Olio Extra Vergine 100% ITA 750ml",
+                    prezzo: 8.99,
+                  })
+                }
+              >
+                <Plus size={20} className="btnIcon" />
+                <span className="btnText">Aggiungi</span>
+              </button>
             </div>
           </div>
-            {/* 3 / 6 */}
+          {/* 3 / 6 */}
           <div className="prodottiMigliori_child flex">
             <div className="childTop flex">
               <img
@@ -70,22 +116,28 @@ export const ProdottiMigliori = () => {
                 className="child_img w100"
               />
               <h3 className="child_azienda">caseificio montano</h3>
-              <h2 className="child_nome">
-                Parmigiano Reggiano DOP 24 mesi
-              </h2>
+              <h2 className="child_nome">Parmigiano Reggiano DOP 24 mesi</h2>
             </div>
             <div className="childBottom">
-                <div className="childBottom_prezzo flex">
-                    <span className="prezzoNetto">4,79 &euro;</span>
-                    <span className="prezzoKG">19,16 &euro; /kg</span>
-                </div>
-                <button className="childBottom_btn flex cursorPOINTER">
-                    <Plus size={20} className="btnIcon" />
-                    <span className="btnText">Aggiungi</span>
-                </button>
+              <div className="childBottom_prezzo flex">
+                <span className="prezzoNetto">4,79 &euro;</span>
+                <span className="prezzoKG">19,16 &euro; /kg</span>
+              </div>
+              <button
+                className="childBottom_btn flex cursorPOINTER"
+                onClick={() =>
+                  incrementoProdottiCarrello({
+                    nome: "Parmigiano Reggiano DOP 24 mesi",
+                    prezzo: 4.79,
+                  })
+                }
+              >
+                <Plus size={20} className="btnIcon" />
+                <span className="btnText">Aggiungi</span>
+              </button>
             </div>
           </div>
-            {/* 4 / 6 */}
+          {/* 4 / 6 */}
           <div className="prodottiMigliori_child flex">
             <div className="childTop flex">
               <img
@@ -94,67 +146,79 @@ export const ProdottiMigliori = () => {
                 className="child_img w100"
               />
               <h3 className="child_azienda">pescheria reale</h3>
-              <h2 className="child_nome">
-                Filetto di Salmone Fresco 300gr
-              </h2>
+              <h2 className="child_nome">Filetto di Salmone Fresco 300gr</h2>
             </div>
             <div className="childBottom">
-                <div className="childBottom_prezzo flex">
-                    <span className="prezzoNetto">5,90 &euro;</span>
-                    <span className="prezzoKG">19,67 &euro; /kg</span>
-                </div>
-                <button className="childBottom_btn flex cursorPOINTER">
-                    <Plus size={20} className="btnIcon" />
-                    <span className="btnText">Aggiungi</span>
-                </button>
+              <div className="childBottom_prezzo flex">
+                <span className="prezzoNetto">5,90 &euro;</span>
+                <span className="prezzoKG">19,67 &euro; /kg</span>
+              </div>
+              <button
+                className="childBottom_btn flex cursorPOINTER"
+                onClick={() =>
+                  incrementoProdottiCarrello({
+                    nome: "Filetto di Salmone Fresco 300gr",
+                    prezzo: 5.9,
+                  })
+                }
+              >
+                <Plus size={20} className="btnIcon" />
+                <span className="btnText">Aggiungi</span>
+              </button>
             </div>
           </div>
-           {/* 5 / 6 */}
+          {/* 5 / 6 */}
           <div className="prodottiMigliori_child flex">
             <div className="childTop flex">
-              <img
-                src={arance}
-                alt="arance"
-                className="child_img w100"
-              />
+              <img src={arance} alt="arance" className="child_img w100" />
               <h3 className="child_azienda">bio sicilia</h3>
               <h2 className="child_nome">
                 Arance Tarocco I.G.P. Bio da Spremitura
               </h2>
             </div>
             <div className="childBottom">
-                <div className="childBottom_prezzo flex">
-                    <span className="prezzoNetto">3,12 &euro;</span>
-                    <span className="prezzoKG">2,08 &euro; /kg</span>
-                </div>
-                <button className="childBottom_btn flex cursorPOINTER">
-                    <Plus size={20} className="btnIcon" />
-                    <span className="btnText">Aggiungi</span>
-                </button>
+              <div className="childBottom_prezzo flex">
+                <span className="prezzoNetto">3,12 &euro;</span>
+                <span className="prezzoKG">2,08 &euro; /kg</span>
+              </div>
+              <button
+                className="childBottom_btn flex cursorPOINTER"
+                onClick={() =>
+                  incrementoProdottiCarrello({
+                    nome: "Arance Tarocco I.G.P. Bio da Spremitura",
+                    prezzo: 3.12,
+                  })
+                }
+              >
+                <Plus size={20} className="btnIcon" />
+                <span className="btnText">Aggiungi</span>
+              </button>
             </div>
           </div>
-           {/* 6 / 6 */}
+          {/* 6 / 6 */}
           <div className="prodottiMigliori_child flex">
             <div className="childTop flex">
-              <img
-                src={mirtilli}
-                alt="mirtilli"
-                className="child_img w100"
-              />
+              <img src={mirtilli} alt="mirtilli" className="child_img w100" />
               <h3 className="child_azienda">bosco trentino</h3>
-              <h2 className="child_nome">
-                Mirtilli Neri Giganti Selvatici
-              </h2>
+              <h2 className="child_nome">Mirtilli Neri Giganti Selvatici</h2>
             </div>
             <div className="childBottom">
-                <div className="childBottom_prezzo flex">
-                    <span className="prezzoNetto">2,29 &euro;</span>
-                    <span className="prezzoKG">18,32 &euro; /kg</span>
-                </div>
-                <button className="childBottom_btn flex cursorPOINTER">
-                    <Plus size={20} className="btnIcon" />
-                    <span className="btnText">Aggiungi</span>
-                </button>
+              <div className="childBottom_prezzo flex">
+                <span className="prezzoNetto">2,29 &euro;</span>
+                <span className="prezzoKG">18,32 &euro; /kg</span>
+              </div>
+              <button
+                className="childBottom_btn flex cursorPOINTER"
+                onClick={() =>
+                  incrementoProdottiCarrello({
+                    nome: "Mirtilli Neri Giganti Selvatici",
+                    prezzo: 2.29,
+                  })
+                }
+              >
+                <Plus size={20} className="btnIcon" />
+                <span className="btnText">Aggiungi</span>
+              </button>
             </div>
           </div>
         </div>
