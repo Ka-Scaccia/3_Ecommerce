@@ -60,6 +60,7 @@ export const RepartoMacelleria = ({
                     incrementoProdottiCarrello({
                       nome: prodotto.nomeProdotto,
                       prezzo: Number(prodotto.prezzo.replace(",", ".")),
+                      img: prodotto.img,
                     })
                   }
                 >

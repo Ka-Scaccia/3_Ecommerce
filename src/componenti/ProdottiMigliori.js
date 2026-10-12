@@ -17,7 +17,7 @@ export const ProdottiMigliori = ({
   const incrementoProdottiCarrello = (nuovoProdotto) => {
     // se un prodotto è già presente nel carrello non aggiungerlo
     const prodottoGiaPresente = prodottiCarrello.some(
-      (prodotto) => prodotto.nome === nuovoProdotto.nome
+      (prodotto) => prodotto.nome === nuovoProdotto.nome,
     );
 
     if (prodottoGiaPresente) {
@@ -36,7 +36,7 @@ export const ProdottiMigliori = ({
       ...prodottiAttuali,
       nuovoProdotto,
     ]);
-    
+
     // incremento num carrello
     setNumProdotti((numAttuale) => numAttuale + 1);
   };
@@ -69,6 +69,8 @@ export const ProdottiMigliori = ({
                   incrementoProdottiCarrello({
                     nome: "Pomodorini Ciliegino di Pachino I.G.P.",
                     prezzo: 2.49,
+                    img: pomodoriniBio,
+                    quantita: 1,
                   })
                 }
               >
@@ -99,6 +101,8 @@ export const ProdottiMigliori = ({
                   incrementoProdottiCarrello({
                     nome: "Olio Extra Vergine 100% ITA 750ml",
                     prezzo: 8.99,
+                    img: olioOliva,
+                    quantita: 1,
                   })
                 }
               >
@@ -129,6 +133,8 @@ export const ProdottiMigliori = ({
                   incrementoProdottiCarrello({
                     nome: "Parmigiano Reggiano DOP 24 mesi",
                     prezzo: 4.79,
+                    img: parmigianoReggiano,
+                    quantita: 1,
                   })
                 }
               >
@@ -159,6 +165,8 @@ export const ProdottiMigliori = ({
                   incrementoProdottiCarrello({
                     nome: "Filetto di Salmone Fresco 300gr",
                     prezzo: 5.9,
+                    img: salmoneFresco,
+                    quantita: 1,
                   })
                 }
               >
@@ -187,6 +195,8 @@ export const ProdottiMigliori = ({
                   incrementoProdottiCarrello({
                     nome: "Arance Tarocco I.G.P. Bio da Spremitura",
                     prezzo: 3.12,
+                    img: arance,
+                    quantita: 1,
                   })
                 }
               >
@@ -213,6 +223,8 @@ export const ProdottiMigliori = ({
                   incrementoProdottiCarrello({
                     nome: "Mirtilli Neri Giganti Selvatici",
                     prezzo: 2.29,
+                    img: mirtilli,
+                    quantita: 1,
                   })
                 }
               >

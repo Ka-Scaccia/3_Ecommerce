@@ -1,0 +1,140 @@
+.carrelloHead {
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--bg-white);
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-neutral);
+}
+
+.carrelloHead_iconX {
+  color: var(--color-neutral);
+  background-color: var(--bg-x-carrello);
+  border-radius: 50%;
+  padding: 2px;
+  width: 24px;
+  height: 24px;
+}
+
+.carrelloHead_svuota {
+  color: var(--color-red);
+  font-weight: 600;
+}
+
+.carrelloBody,
+.carrelloBody_text {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.carrelloBody_text {
+  margin-top: var(--spacing-large);
+  margin-bottom: var(--spacing-large);
+  justify-content: space-between;
+  padding: 0 var(--spacing-small);
+  font-size: 20px;
+}
+
+.carrelloBody_title {
+  font-weight: 600;
+}
+
+.prodottiBox_Img img {
+  width: 150px;
+  border-radius: 16px;
+}
+
+.carrelloBody {
+  flex-direction: column;
+}
+
+.carrelloBody_prodotti {
+  margin: 0 auto;
+  width: 90%;
+  flex-direction: column;
+  gap: var(--spacing-large);
+}
+
+.carrelloBody_prodottiBox {
+  gap: var(--spacing-small);
+}
+
+.prodottiBox_content {
+  font-size: 12px;
+  flex-basis: 40%;
+}
+
+.prodottiBoxContente_prezzo {
+  font-size: 26px;
+  color: var(--color-primary);
+}
+
+.prodottiBox_btn {
+  margin-top: var(--spacing-small);
+  align-items: center;
+  font-size: 16px;
+  gap: var(--spacing-small);
+  border: none;
+  border: 2px solid var(--color-primary);
+  border-radius: 16px;
+  background-color: transparent;
+  padding: 4px;
+  user-select: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.carrelloFoot {
+  margin: 0 auto;
+  margin-top: var(--spacing-large);
+  width: 90%;
+  flex-direction: column;
+  gap: var(--spacing-small);
+  background-color: var(--bg-white);
+  padding: var(--spacing-small);
+  border-radius: 16px;
+}
+
+.carrelloFoot_listaSubtotale h2,
+.carrelloFoot_listaSpedizioneStandard h2 {
+  color: var(--color-neutral);
+  font-size: 18px;
+}
+
+.carrelloFoot_prezzoTotale h2 {
+  color: var(--color-primary);
+  font-size: 28px;
+}
+
+.carrelloFoot_listaSubtotale,
+.carrelloFoot_listaSpedizioneStandard,
+.carrelloFoot_prezzoTotale {
+  justify-content: space-between; 
+}
+
+.carrelloFoot_singoliPrezzi {
+  border-bottom: 1px solid var(--color-grey);
+  padding-bottom: 10px;
+}
+
+/* media query */
+@media screen and (min-width: 1024px) {
+  .carrelloBody,
+  .carrelloBody_text,
+  .carrelloBody_prodotti,
+  .carrelloFoot {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .carrelloFoot {
+    width: 50%;
+    margin-top: var(--spacing-large);
+  }
+
+  .carrelloBody_text {
+    margin-top: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+  }
+}

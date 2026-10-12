@@ -12,6 +12,7 @@ import { RepartoCondimenti } from "./componenti/reparti/RepartoCondimenti.js";
 import { RepartoLatticini } from "./componenti/reparti/RepartoLatticini.js";
 import { RepartoPescheria } from "./componenti/reparti/RepartoPescheria.js";
 import { RepartoColazioneEforno } from "./componenti/reparti/RepartoColazioneEForno.js";
+import { Carrello } from "./componenti/Carrello.js";
 // conteggio prodotti nel carrello e arrayCarrello
 import { useState } from "react";
 
@@ -23,7 +24,12 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header countCarrello={numProdotti} setCountCarrello={setNumProdotti} />
+        <Header
+          countCarrello={numProdotti}
+          setCountCarrello={setNumProdotti}
+          arrayCarrello={prodottiCarrello}
+          setArrayCarrello={setProdottiCarrello}
+        />
         <Routes>
           <Route
             path="/"
@@ -42,9 +48,9 @@ function App() {
             element={
               <RepartoOrtofrutta
                 countCarrello={numProdotti}
-                setCountCarrello={setNumProdotti}
-                prodottiCarrello={prodottiCarrello}
                 setProdottiCarrello={setProdottiCarrello}
+                prodottiCarrello={prodottiCarrello}
+                setArrayCarrello={setProdottiCarrello}
               />
             }
           />
@@ -53,9 +59,9 @@ function App() {
             element={
               <RepartoMacelleria
                 countCarrello={numProdotti}
-                setCountCarrello={setNumProdotti}
-                prodottiCarrello={prodottiCarrello}
                 setProdottiCarrello={setProdottiCarrello}
+                prodottiCarrello={prodottiCarrello}
+                setArrayCarrello={setProdottiCarrello}
               />
             }
           />
@@ -64,9 +70,9 @@ function App() {
             element={
               <RepartoColazioneEforno
                 countCarrello={numProdotti}
-                setCountCarrello={setNumProdotti}
-                prodottiCarrello={prodottiCarrello}
                 setProdottiCarrello={setProdottiCarrello}
+                prodottiCarrello={prodottiCarrello}
+                setArrayCarrello={setProdottiCarrello}
               />
             }
           />
@@ -75,9 +81,9 @@ function App() {
             element={
               <RepartoCantina
                 countCarrello={numProdotti}
-                setCountCarrello={setNumProdotti}
-                prodottiCarrello={prodottiCarrello}
                 setProdottiCarrello={setProdottiCarrello}
+                prodottiCarrello={prodottiCarrello}
+                setArrayCarrello={setProdottiCarrello}
               />
             }
           />
@@ -86,9 +92,9 @@ function App() {
             element={
               <RepartoBio
                 countCarrello={numProdotti}
-                setCountCarrello={setNumProdotti}
-                prodottiCarrello={prodottiCarrello}
                 setProdottiCarrello={setProdottiCarrello}
+                prodottiCarrello={prodottiCarrello}
+                setArrayCarrello={setProdottiCarrello}
               />
             }
           />
@@ -97,9 +103,9 @@ function App() {
             element={
               <RepartoCondimenti
                 countCarrello={numProdotti}
-                setCountCarrello={setNumProdotti}
-                prodottiCarrello={prodottiCarrello}
                 setProdottiCarrello={setProdottiCarrello}
+                prodottiCarrello={prodottiCarrello}
+                setArrayCarrello={setProdottiCarrello}
               />
             }
           />
@@ -108,9 +114,9 @@ function App() {
             element={
               <RepartoLatticini
                 countCarrello={numProdotti}
-                setCountCarrello={setNumProdotti}
-                prodottiCarrello={prodottiCarrello}
                 setProdottiCarrello={setProdottiCarrello}
+                prodottiCarrello={prodottiCarrello}
+                setArrayCarrello={setProdottiCarrello}
               />
             }
           />
@@ -119,9 +125,20 @@ function App() {
             element={
               <RepartoPescheria
                 countCarrello={numProdotti}
-                setCountCarrello={setNumProdotti}
-                prodottiCarrello={prodottiCarrello}
                 setProdottiCarrello={setProdottiCarrello}
+                prodottiCarrello={prodottiCarrello}
+                setArrayCarrello={setProdottiCarrello}
+              />
+            }
+          />
+          <Route
+            path="carrello"
+            element={
+              <Carrello
+                countCarrello={numProdotti}
+                setCountCarrello={setNumProdotti}
+                arrayCarrello={prodottiCarrello}
+                setArrayCarrello={setProdottiCarrello}
               />
             }
           />

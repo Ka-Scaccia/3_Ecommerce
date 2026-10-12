@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-export const MenuReparti = ({ prodottiCarrello, setProdottiCarrello }) => {
+export const MenuReparti = () => {
   return (
     <>
       <div className="menuReparti">

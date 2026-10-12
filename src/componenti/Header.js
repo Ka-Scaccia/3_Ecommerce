@@ -10,7 +10,7 @@ import { ShoppingBasket } from "lucide-react";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-export const Header = ({ countCarrello, setCountCarrello}) => {
+export const Header = ({ countCarrello }) => {
   // gestione ricerca prodotti
   const [testoRicerca, setTestoRicerca] = useState("");
   const [suggerimentoRicerca, setSuggerimentoRicerca] = useState([]);
@@ -59,6 +59,16 @@ export const Header = ({ countCarrello, setCountCarrello}) => {
     }
   };
 
+  // gestione click icona carrello
+  const clickCarrello = () => {
+    if (countCarrello === 0) {
+      alert("Aggiungi qualcosa al carrello!");
+    } else {
+      // controllo input ricerca
+      navigate("/carrello");
+    }
+  };
+
   return (
     <>
       <header>
@@ -91,31 +101,35 @@ export const Header = ({ countCarrello, setCountCarrello}) => {
                   className="iconInput cursorPOINTER"
                 ></FontAwesomeIcon>
               </button>
-              {suggerimentoRicerca.length > 0 && suggerimentoRicerca.length < 6 && (
-                <div className="risultatiRicercaSuggerimenti flex cursorPOINTER">
-                  {suggerimentoRicerca.map((item) => (
-                    <div
-                      className="risultatiRicerca_box flex"
-                      key={item.id}
-                      onClick={() => selezionaSuggerimento(item.nome)}
-                    >
-                      <span className="risultatiRicercaBox_icona">
-                        <FontAwesomeIcon icon={faSearch} />
-                      </span>
-                      <span className="risultatiRicercaBox_nome"
+              {suggerimentoRicerca.length > 0 &&
+                suggerimentoRicerca.length < 6 && (
+                  <div className="risultatiRicercaSuggerimenti flex cursorPOINTER">
+                    {suggerimentoRicerca.map((item) => (
+                      <div
+                        className="risultatiRicerca_box flex"
+                        key={item.id}
+                        onClick={() => selezionaSuggerimento(item.nome)}
                       >
-                        {item.nome}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              )}
+                        <span className="risultatiRicercaBox_icona">
+                          <FontAwesomeIcon icon={faSearch} />
+                        </span>
+                        <span className="risultatiRicercaBox_nome">
+                          {item.nome}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
             </div>
           </div>
           {/* preferiti, avatar, carrello */}
           <div className="headerRight flex">
             <div className="basketBox cursorPOINTER">
-              <ShoppingBasket size={28} className="iconBasket cursorPOINTER" />
+              <ShoppingBasket
+                size={28}
+                className="iconBasket cursorPOINTER"
+                onClick={clickCarrello}
+              />
               <span className="articoliCarrello">{countCarrello}</span>
             </div>
             <img
