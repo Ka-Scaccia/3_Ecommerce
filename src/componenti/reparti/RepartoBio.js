@@ -59,7 +59,7 @@ export const RepartoBio = ({
                   onClick={() =>
                     incrementoProdottiCarrello({
                       nome: prodotto.nomeProdotto,
-                      prezzo: Number(prodotto.prezzo.replace(",", ".")),
+                      prezzo: prodotto.prezzo,
                       img: prodotto.img,
                     })
                   }
