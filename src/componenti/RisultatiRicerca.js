@@ -4,7 +4,12 @@ import { Plus } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-export const RisultatiRicerca = () => {
+export const RisultatiRicerca = ({
+  countCarrello,
+  setCountCarrello,
+  prodottiCarrello,
+  setProdottiCarrello,
+}) => {
   // recupero dati pagina precedente
   const { state } = useLocation();
   const { ricerca, suggerimentoRicerca = [] } = state ?? {};
@@ -19,6 +24,30 @@ export const RisultatiRicerca = () => {
 
   // calcolo numero suggerimenti per testo "ricerca"
   const numeroRisultati = suggerimentoRicerca.length;
+
+  const incrementoProdottiCarrello = (nuovoProdotto) => {
+    const prodottoGiaPresente = prodottiCarrello.some(
+      (prodottoNelCarrello) =>
+        prodottoNelCarrello.nome === nuovoProdotto.nome,
+    );
+
+    if (prodottoGiaPresente) {
+      alert("Questo prodotto è già presente nel carrello.");
+      return;
+    }
+
+    if (countCarrello >= 10) {
+      alert("Hai raggiunto il limite massimo di 10 prodotti.");
+      return;
+    }
+
+    setProdottiCarrello((prodottiAttuali) => [
+      ...prodottiAttuali,
+      nuovoProdotto,
+    ]);
+    setCountCarrello((numeroAttuale) => numeroAttuale + 1);
+  };
+
   return (
     <>
       <div className="head">
@@ -42,10 +71,25 @@ export const RisultatiRicerca = () => {
             </div>
             <div className="childBottom">
               <div className="childBottom_prezzo flex">
-                <span className="prezzoNetto">{prodotto.prezzo} &euro;</span>
+                <span className="prezzoNetto">
+                  {prodotto.prezzo.toLocaleString("it-IT", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}
+                  &euro;</span>
                 <span className="prezzoKG">{prodotto.prezzoKG} &euro; / {prodotto.misura}</span>
               </div>
-              <button className="childBottom_btn flex cursorPOINTER">
+              <button
+                className="childBottom_btn flex cursorPOINTER"
+                onClick={() =>
+                  incrementoProdottiCarrello({
+                    nome: prodotto.nomeProdotto,
+                    prezzo: prodotto.prezzo,
+                    quantita: 1,
+                    img: prodotto.img,
+                  })
+                }
+              >
                 <Plus size={20} className="btnIcon" />
                 <span className="btnText">Aggiungi</span>
               </button>

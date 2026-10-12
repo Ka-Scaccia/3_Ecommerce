@@ -42,7 +42,17 @@ function App() {
               />
             }
           />
-          <Route path="/risultati-ricerca" element={<RisultatiRicerca />} />
+          <Route
+            path="/risultati-ricerca"
+            element={
+              <RisultatiRicerca
+                countCarrello={numProdotti}
+                setCountCarrello={setNumProdotti}
+                prodottiCarrello={prodottiCarrello}
+                setProdottiCarrello={setProdottiCarrello}
+              />
+            }
+          />
           <Route
             path="/reparto-ortofrutta"
             element={
