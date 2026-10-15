@@ -90,7 +90,7 @@ export const Carrello = ({
                     )}
                     &euro;
                   </h3>
-                  <button className="prodottiBox_btn flex">
+                  <div className="prodottiBox_btn flex">
                     <span
                       className="prodottiBox_btnMinus cursorPOINTER"
                       onClick={() => decrementaProdotto(index)}
@@ -106,7 +106,7 @@ export const Carrello = ({
                     >
                       <Plus />
                     </span>
-                  </button>
+                  </div>
                 </div>
               </div>
             ))}
