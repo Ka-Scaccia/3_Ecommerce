@@ -2,7 +2,7 @@ import "../CSS/route/home/card_prodottiFreschi.css";
 import cardProdottiFreschi from "../asset/img/card_prodottiFreschi.webp";
 import { Link } from "react-router-dom";
 
-export const Card_prodottiFreschi = () => {
+export const CardProdottiFreschi = () => {
   return (
     <>
       <div className="cardProdottiFreschi flex">

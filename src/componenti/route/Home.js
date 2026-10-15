@@ -1,4 +1,4 @@
-import { Card_prodottiFreschi } from "../Card_prodottiFreschi.js";
+import { CardProdottiFreschi } from "../CardProdottiFreschi.js";
 import { GuidaSpesa } from "../GuidaSpesa.js";
 import { MenuReparti } from "../MenuReparti.js";
 import { ProdottiMigliori } from "../ProdottiMigliori.js";
@@ -11,7 +11,7 @@ export const Home = ({
 }) => {
   return (
     <>
-      <Card_prodottiFreschi />
+      <CardProdottiFreschi />
       <MenuReparti
         prodottiCarrello={arrayCarrello}
         setProdottiCarrello={setArrayCarrello}
