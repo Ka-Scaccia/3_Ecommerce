@@ -60,7 +60,7 @@ function App() {
                 countCarrello={numProdotti}
                 setProdottiCarrello={setProdottiCarrello}
                 prodottiCarrello={prodottiCarrello}
-                setArrayCarrello={setProdottiCarrello}
+                setCountCarrello={setNumProdotti}
               />
             }
           />
@@ -71,7 +71,7 @@ function App() {
                 countCarrello={numProdotti}
                 setProdottiCarrello={setProdottiCarrello}
                 prodottiCarrello={prodottiCarrello}
-                setArrayCarrello={setProdottiCarrello}
+                setCountCarrello={setNumProdotti}
               />
             }
           />
@@ -82,7 +82,7 @@ function App() {
                 countCarrello={numProdotti}
                 setProdottiCarrello={setProdottiCarrello}
                 prodottiCarrello={prodottiCarrello}
-                setArrayCarrello={setProdottiCarrello}
+                setCountCarrello={setNumProdotti}
               />
             }
           />
@@ -93,7 +93,7 @@ function App() {
                 countCarrello={numProdotti}
                 setProdottiCarrello={setProdottiCarrello}
                 prodottiCarrello={prodottiCarrello}
-                setArrayCarrello={setProdottiCarrello}
+                setCountCarrello={setNumProdotti}
               />
             }
           />
@@ -104,7 +104,7 @@ function App() {
                 countCarrello={numProdotti}
                 setProdottiCarrello={setProdottiCarrello}
                 prodottiCarrello={prodottiCarrello}
-                setArrayCarrello={setProdottiCarrello}
+                setCountCarrello={setNumProdotti}
               />
             }
           />
@@ -115,7 +115,7 @@ function App() {
                 countCarrello={numProdotti}
                 setProdottiCarrello={setProdottiCarrello}
                 prodottiCarrello={prodottiCarrello}
-                setArrayCarrello={setProdottiCarrello}
+                setCountCarrello={setNumProdotti}
               />
             }
           />
@@ -126,7 +126,7 @@ function App() {
                 countCarrello={numProdotti}
                 setProdottiCarrello={setProdottiCarrello}
                 prodottiCarrello={prodottiCarrello}
-                setArrayCarrello={setProdottiCarrello}
+                setCountCarrello={setNumProdotti}
               />
             }
           />
@@ -137,7 +137,7 @@ function App() {
                 countCarrello={numProdotti}
                 setProdottiCarrello={setProdottiCarrello}
                 prodottiCarrello={prodottiCarrello}
-                setArrayCarrello={setProdottiCarrello}
+                setCountCarrello={setNumProdotti}
               />
             }
           />
