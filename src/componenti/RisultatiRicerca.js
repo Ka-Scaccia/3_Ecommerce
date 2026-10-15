@@ -27,8 +27,7 @@ export const RisultatiRicerca = ({
 
   const incrementoProdottiCarrello = (nuovoProdotto) => {
     const prodottoGiaPresente = prodottiCarrello.some(
-      (prodottoNelCarrello) =>
-        prodottoNelCarrello.nome === nuovoProdotto.nome,
+      (prodottoNelCarrello) => prodottoNelCarrello.nome === nuovoProdotto.nome,
     );
 
     if (prodottoGiaPresente) {
@@ -61,11 +60,13 @@ export const RisultatiRicerca = ({
         {suggerimentoRicerca.map((prodotto) => (
           <div className="risultatiRicerca_box cursorPOINTER" key={prodotto.id}>
             <div className="childTop flex">
+              {prodottiRicercaIMG && (
                 <img
                   src={prodotto.img}
                   alt={`${prodotto.nome}`}
                   className="child_img w100"
-                /> 
+                />
+              )}
               <h3 className="child_azienda">{prodotto.fornitore}</h3>
               <h2 className="child_nome">{prodotto.nomeProdotto}</h2>
             </div>
@@ -76,8 +77,11 @@ export const RisultatiRicerca = ({
                     minimumFractionDigits: 2,
                     maximumFractionDigits: 2,
                   })}
-                  &euro;</span>
-                <span className="prezzoKG">{prodotto.prezzoKG} &euro; / {prodotto.misura}</span>
+                  &euro;
+                </span>
+                <span className="prezzoKG">
+                  {prodotto.prezzoKG} &euro; / {prodotto.misura}
+                </span>
               </div>
               <button
                 className="childBottom_btn flex cursorPOINTER"
