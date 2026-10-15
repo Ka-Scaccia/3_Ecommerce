@@ -61,6 +61,7 @@ export const RepartoMacelleria = ({
                       nome: prodotto.nomeProdotto,
                       prezzo: prodotto.prezzo,
                       img: prodotto.img,
+                      quantita: 1,
                     })
                   }
                 >

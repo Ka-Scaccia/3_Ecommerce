@@ -61,6 +61,7 @@ export const RepartoBio = ({
                       nome: prodotto.nomeProdotto,
                       prezzo: prodotto.prezzo,
                       img: prodotto.img,
+                      quantita: 1,
                     })
                   }
                 >
