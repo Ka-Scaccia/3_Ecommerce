@@ -101,10 +101,9 @@ export const Header = ({ countCarrello }) => {
                   className="iconInput cursorPOINTER"
                 ></FontAwesomeIcon>
               </button>
-              {suggerimentoRicerca.length > 0 &&
-                suggerimentoRicerca.length < 6 && (
+              {suggerimentoRicerca.length > 0 && (
                   <div className="risultatiRicercaSuggerimenti flex cursorPOINTER">
-                    {suggerimentoRicerca.map((item) => (
+                    {suggerimentoRicerca.slice(0,5).map((item) => (
                       <div
                         className="risultatiRicerca_box flex"
                         key={item.id}
