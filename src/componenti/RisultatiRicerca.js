@@ -1,8 +1,9 @@
 import "../CSS/risultatiRicerca.css";
 import { Plus } from "lucide-react";
 // recupero dati pagina precedente
-import { useLocation } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { arrayProdotti } from "../componenti/prodotti.js";
 
 export const RisultatiRicerca = ({
   countCarrello,
@@ -10,9 +11,66 @@ export const RisultatiRicerca = ({
   prodottiCarrello,
   setProdottiCarrello,
 }) => {
-  // recupero dati pagina precedente
+  // MODIFICO L'URL IN BASE ALLA PAROLA CERCATA
   const { state } = useLocation();
-  const { ricerca, suggerimentoRicerca = [] } = state ?? {};
+  const [SearchParams, setSearchParams] = useSearchParams();
+
+  // 1. recupero la ricerca e i suggerimenti salvandoli su sessionStorage
+  const [ricerca, setRicerca] = useState(() => {
+    return (
+      state?.ricerca ||
+      SearchParams.get("q") ||
+      sessionStorage.getItem("ultimaRicerca") ||
+      ""
+    );
+  });
+
+  const [suggerimentoRicerca, setSuggerimentoRicerca] = useState(() => {
+    // CASO A: ricerca effettuata dalla pagina precedente
+    if (state?.suggerimentoRicerca) {
+      sessionStorage.setItem(
+        "ultimiSuggerimenti",
+        JSON.stringify(state.suggerimentoRicerca),
+      );
+      return state.suggerimentoRicerca;
+    }
+
+    // CASO B: refresh
+    const saved = sessionStorage.getItem("ultimiSuggerimenti");
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (parsed.length > 0) return parsed;
+    }
+
+    // CASO C: condivisione link
+    const queryUrl = SearchParams.get("q");
+    if (queryUrl) {
+      const queryLower = queryUrl.toLowerCase();
+      return arrayProdotti.filter(
+        (prodotto) =>
+          prodotto.nomeProdotto.toLowerCase().includes(queryLower) ||
+          prodotto.fornitore.toLowerCase().includes(queryLower),
+      );
+    }
+    return [];
+  });
+
+  // 2. aggiorno l'URL con la query string
+  useEffect(() => {
+    if (ricerca) {
+      setSearchParams({ q: ricerca });
+      sessionStorage.setItem("ultimaRicerca", ricerca);
+    }
+  }, [ricerca, setSearchParams]);
+
+  useEffect(() => {
+    if (suggerimentoRicerca.length > 0) {
+      sessionStorage.setItem(
+        "ultimiSuggerimenti",
+        JSON.stringify(suggerimentoRicerca),
+      );
+    }
+  }, [suggerimentoRicerca]);
 
   // creazione array prodottiRicercaIMG
   const [prodottiRicercaIMG, setProdottiRicercaIMG] = useState([]);
