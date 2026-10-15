@@ -142,7 +142,7 @@ function App() {
             }
           />
           <Route
-            path="carrello"
+            path="/carrello"
             element={
               <Carrello
                 countCarrello={numProdotti}
