@@ -53,7 +53,7 @@ export const Header = ({ countCarrello }) => {
       );
 
       navigate("/risultati-ricerca", {
-        state: { ricerca, suggerimentoRicerca: risultati },
+        state: { ricerca, suggerimentoRicerca: risultati, timestamp: Date.now() },
       });
 
       setSuggerimentoRicerca([]);
@@ -92,6 +92,7 @@ export const Header = ({ countCarrello }) => {
                 className="input"
                 value={testoRicerca}
                 onChange={salvataggioTestoRicercaESuggerimenti}
+                onKeyDown={(e) => e.key === "Enter" && eseguiRicerca()}
               />
               <button
                 className="link_iconInput"

@@ -1,6 +1,5 @@
 import "../CSS/risultatiRicerca.css";
 import { Plus } from "lucide-react";
-// recupero dati pagina precedente
 import { useLocation, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { arrayProdotti } from "../componenti/prodotti.js";
@@ -11,76 +10,60 @@ export const RisultatiRicerca = ({
   prodottiCarrello,
   setProdottiCarrello,
 }) => {
-  // MODIFICO L'URL IN BASE ALLA PAROLA CERCATA
   const { state } = useLocation();
-  const [SearchParams, setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  // 1. recupero la ricerca e i suggerimenti salvandoli su sessionStorage
-  const [ricerca, setRicerca] = useState(() => {
-    return (
-      state?.ricerca ||
-      SearchParams.get("q") ||
-      sessionStorage.getItem("ultimaRicerca") ||
-      ""
-    );
-  });
+  const [ricerca, setRicerca] = useState("");
+  const [suggerimentoRicerca, setSuggerimentoRicerca] = useState([]);
 
-  const [suggerimentoRicerca, setSuggerimentoRicerca] = useState(() => {
-    // CASO A: ricerca effettuata dalla pagina precedente
-    if (state?.suggerimentoRicerca) {
-      sessionStorage.setItem(
-        "ultimiSuggerimenti",
-        JSON.stringify(state.suggerimentoRicerca),
-      );
-      return state.suggerimentoRicerca;
-    }
+  // Utilizo useEffect che ascolta ogni cambiamento di "state" o di "searchParams"
+  useEffect(() => {
+    let testoRicerca = "";
+    let risultatiTrovati = [];
 
-    // CASO B: refresh
-    const saved = sessionStorage.getItem("ultimiSuggerimenti");
-    if (saved) {
-      const parsed = JSON.parse(saved);
-      if (parsed.length > 0) return parsed;
-    }
-
-    // CASO C: condivisione link
-    const queryUrl = SearchParams.get("q");
-    if (queryUrl) {
-      const queryLower = queryUrl.toLowerCase();
-      return arrayProdotti.filter(
+    // 1. CASO A: l'utente arriva dall'header 
+    if (state?.ricerca) {
+      testoRicerca = state.ricerca;
+      risultatiTrovati = state.suggerimentoRicerca || [];
+      
+      // salvo in sessionStorage per eventuali refresh
+      sessionStorage.setItem("ultimaRicerca", testoRicerca);
+      sessionStorage.setItem("ultimiSuggerimenti", JSON.stringify(risultatiTrovati));
+    } 
+    // 2. CASO C: Condivisione link o modifica diretta dell'URL (es. ?q=...)
+    else if (searchParams.get("q")) {
+      testoRicerca = searchParams.get("q");
+      const queryLower = testoRicerca.toLowerCase();
+      
+      risultatiTrovati = arrayProdotti.filter(
         (prodotto) =>
+          prodotto.nome.toLowerCase().includes(queryLower) ||
           prodotto.nomeProdotto.toLowerCase().includes(queryLower) ||
-          prodotto.fornitore.toLowerCase().includes(queryLower),
+          prodotto.fornitore.toLowerCase().includes(queryLower)
       );
+      
+      sessionStorage.setItem("ultimaRicerca", testoRicerca);
+      sessionStorage.setItem("ultimiSuggerimenti", JSON.stringify(risultatiTrovati));
+    } 
+    // 3. CASO B: Refresh della pagina (recupero da sessionStorage)
+    else {
+      const savedRicerca = sessionStorage.getItem("ultimaRicerca") || "";
+      const savedSuggerimenti = sessionStorage.getItem("ultimiSuggerimenti");
+      
+      testoRicerca = savedRicerca;
+      risultatiTrovati = savedSuggerimenti ? JSON.parse(savedSuggerimenti) : [];
     }
-    return [];
-  });
 
-  // 2. aggiorno l'URL con la query string
-  useEffect(() => {
-    if (ricerca) {
-      setSearchParams({ q: ricerca });
-      sessionStorage.setItem("ultimaRicerca", ricerca);
+    setRicerca(testoRicerca);
+    setSuggerimentoRicerca(risultatiTrovati);
+
+    // sincronizzo l'URL se abbiamo una ricerca valida
+    if (testoRicerca) {
+      setSearchParams({ q: testoRicerca }, { replace: true });
     }
-  }, [ricerca, setSearchParams]);
+  }, [state, searchParams]); // Si attiva ogni volta che premi invio (aggiornando lo state) o cambi URL
 
-  useEffect(() => {
-    if (suggerimentoRicerca.length > 0) {
-      sessionStorage.setItem(
-        "ultimiSuggerimenti",
-        JSON.stringify(suggerimentoRicerca),
-      );
-    }
-  }, [suggerimentoRicerca]);
-
-  // creazione array prodottiRicercaIMG
-  const [prodottiRicercaIMG, setProdottiRicercaIMG] = useState([]);
-  useEffect(() => {
-    // ogni volta che suggerimentoRicerca cambia creo un nuovo elemento per
-    // prodottiRicercaIMG e ci aggiungo i nomi dei suggerimenti della ricerca
-    setProdottiRicercaIMG(suggerimentoRicerca.map((prodotto) => prodotto.img));
-  }, [suggerimentoRicerca]);
-
-  // calcolo numero suggerimenti per testo "ricerca"
+  // Calcolo numero suggerimenti
   const numeroRisultati = suggerimentoRicerca.length;
 
   const incrementoProdottiCarrello = (nuovoProdotto) => {
@@ -118,10 +101,10 @@ export const RisultatiRicerca = ({
         {suggerimentoRicerca.map((prodotto) => (
           <div className="risultatiRicerca_box cursorPOINTER" key={prodotto.id}>
             <div className="childTop flex">
-              {prodottiRicercaIMG && (
+              {prodotto.img && (
                 <img
                   src={prodotto.img}
-                  alt={`${prodotto.nome}`}
+                  alt={`${prodotto.nomeProdotto || prodotto.nome}`}
                   className="child_img w100"
                 />
               )}
