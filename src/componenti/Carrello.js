@@ -38,7 +38,7 @@ export const Carrello = ({
   };
 
   // gestione somma subtotale e totale
-  const costoSpedizione = 3.90;
+  const costoSpedizione = arrayCarrello.length > 0 ? 3.90 : 0;
   const totaleCarrello =
     arrayCarrello.reduce(
       (totale, prodotto) =>
