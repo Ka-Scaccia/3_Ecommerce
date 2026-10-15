@@ -26,7 +26,8 @@ export const Header = ({ countCarrello }) => {
 
     // confronto con testo inserito con array oggetti prodotti
     const filtrati = arrayProdotti.filter((item) =>
-      item.nome.toLowerCase().includes(valore.toLowerCase()),
+      item.nome.toLowerCase().includes(valore.toLowerCase()) ||
+      item.nomeProdotto.toLowerCase().includes(valore.toLowerCase())
     );
 
     setSuggerimentoRicerca(filtrati);
