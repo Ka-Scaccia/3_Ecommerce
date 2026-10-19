@@ -60,7 +60,7 @@ export const RisultatiRicerca = ({
     if (testoRicerca) {
       setSearchParams({ q: testoRicerca }, { replace: true });
     }
-  }, [state, searchParams]); // Si attiva ogni volta che premi invio (aggiornando lo state) o cambi URL
+  }, [state, searchParams, setSearchParams]); // Si attiva ogni volta che premi invio (aggiornando lo state) o cambi URL
 
   // Calcolo numero suggerimenti
   const numeroRisultati = suggerimentoRicerca.length;
