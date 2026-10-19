@@ -26,7 +26,7 @@ export const Header = ({ countCarrello }) => {
 
     // confronto del testo inserito con i nomi dei prodotti
     const filtrati = arrayProdotti.filter((item) =>
-      item.nomeProdotto.toLowerCase().includes(valore.toLowerCase())
+      item.nomeProdotto.toLowerCase().includes(valore.toLowerCase()),
     );
 
     setSuggerimentoRicerca(filtrati);
@@ -52,7 +52,11 @@ export const Header = ({ countCarrello }) => {
       );
 
       navigate("/risultati-ricerca", {
-        state: { ricerca, suggerimentoRicerca: risultati, timestamp: Date.now() },
+        state: {
+          ricerca,
+          suggerimentoRicerca: risultati,
+          timestamp: Date.now(),
+        },
       });
 
       setSuggerimentoRicerca([]);
@@ -72,6 +76,11 @@ export const Header = ({ countCarrello }) => {
   return (
     <>
       <header>
+        <p className="informativa flex">
+          Questo sito e-commerce è un progetto dimostrativo realizzato a scopo
+          di esercitazione. Tutti i dati presenti sono fittizi e non viene
+          raccolta alcuna informazione personale.
+        </p>
         {/* logo, titolo, ricerca */}
         <div className="header flex">
           <div className="headerLeft flex">
@@ -103,23 +112,23 @@ export const Header = ({ countCarrello }) => {
                 ></FontAwesomeIcon>
               </button>
               {suggerimentoRicerca.length > 0 && (
-                  <div className="risultatiRicercaSuggerimenti flex cursorPOINTER">
-                    {suggerimentoRicerca.slice(0,5).map((item) => (
-                      <div
-                        className="risultatiRicerca_box flex"
-                        key={item.id}
-                        onClick={() => selezionaSuggerimento(item.nomeProdotto)}
-                      >
-                        <span className="risultatiRicercaBox_icona">
-                          <FontAwesomeIcon icon={faSearch} />
-                        </span>
-                        <span className="risultatiRicercaBox_nome">
-                          {item.nomeProdotto}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                )}
+                <div className="risultatiRicercaSuggerimenti flex cursorPOINTER">
+                  {suggerimentoRicerca.slice(0, 5).map((item) => (
+                    <div
+                      className="risultatiRicerca_box flex"
+                      key={item.id}
+                      onClick={() => selezionaSuggerimento(item.nomeProdotto)}
+                    >
+                      <span className="risultatiRicercaBox_icona">
+                        <FontAwesomeIcon icon={faSearch} />
+                      </span>
+                      <span className="risultatiRicercaBox_nome">
+                        {item.nomeProdotto}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
           {/* preferiti, avatar, carrello */}
