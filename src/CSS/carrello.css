@@ -79,6 +79,7 @@
   background-color: transparent;
   padding: 4px;
   user-select: none;
+  width: fit-content;
 }
 
 ul {
