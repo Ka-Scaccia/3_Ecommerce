@@ -38,13 +38,23 @@ export const Carrello = ({
   };
 
   // gestione somma subtotale e totale
-  const costoSpedizione = arrayCarrello.length > 0 ? 3.90 : 0;
+  const costoSpedizione = arrayCarrello.length > 0 ? 3.9 : 0;
   const totaleCarrello =
     arrayCarrello.reduce(
       (totale, prodotto) =>
         totale + Math.round(prodotto.prezzo * 100) * prodotto.quantita,
       0,
     ) / 100;
+
+  // conferma ordine
+  const confermaOrdine = () => {
+    if(countCarrello === 0) {
+      alert("Inserisci qualcosa nel carrello!");
+    } else {
+      alert("Ordine confermato!");
+      svuotaCarrello();
+    }
+  }
 
   return (
     <>
@@ -157,6 +167,10 @@ export const Carrello = ({
               </span>
             </li>
           </ul>
+        </div>
+        <div className="carrelloFoot_btnInvioOrdine flex">
+          <button className="carrelloFootBtnInvioOrdine_btn cursorPOINTER"
+          onClick={confermaOrdine}>Conferma ordine</button>
         </div>
       </div>
     </>

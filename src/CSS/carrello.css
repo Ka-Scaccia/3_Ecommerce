@@ -119,6 +119,21 @@ ul {
   padding-bottom: 10px;
 }
 
+.carrelloFoot_btnInvioOrdine {
+  margin-top: var(--spacing-large);
+  align-items: center;
+  justify-content: center;
+}
+
+.carrelloFootBtnInvioOrdine_btn {
+  padding: var(--spacing-small);
+  border: 3px solid var(--color-primary);
+  border-radius: 16px;
+  background-color: var(--bg-grey);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 /* media query */
 @media screen and (min-width: 1024px) {
   .carrelloBody,
