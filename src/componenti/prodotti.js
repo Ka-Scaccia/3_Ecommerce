@@ -40,7 +40,6 @@ export const arrayProdotti = [
   {
     id: 1,
     quantita: 1,
-    nome: "Arance",
     fornitore: "Bio sicilia",
     nomeProdotto: "Arance Tarocco I.G.P. Bio da Spremitura",
     prezzo: 3.12,
@@ -52,7 +51,6 @@ export const arrayProdotti = [
   {
     id: 2,
     quantita: 1,
-    nome: "Mirtilli",
     fornitore: "Bosco trentino",
     nomeProdotto: "Mirtilli Neri Giganti Selvatici",
     prezzo: 2.29,
@@ -64,7 +62,6 @@ export const arrayProdotti = [
   {
     id: 3,
     quantita: 1,
-    nome: "Olio d'oliva",
     fornitore: "Frantoio muraglia",
     nomeProdotto: "Olio Extra Vergine 100% ITA 750ml",
     prezzo: 8.99,
@@ -76,7 +73,6 @@ export const arrayProdotti = [
   {
     id: 4,
     quantita: 1,
-    nome: "Parmigiano reggiano",
     fornitore: "Caseificio montano",
     nomeProdotto: "Parmigiano Reggiano DOP 24 mesi",
     prezzo: 4.79,
@@ -88,7 +84,6 @@ export const arrayProdotti = [
   {
     id: 5,
     quantita: 1,
-    nome: "Pomodorini bio",
     fornitore: "Pachino igp",
     nomeProdotto: "Pomodorini Ciliegino di Pachino I.G.P.",
     prezzo: 2.49,
@@ -100,7 +95,6 @@ export const arrayProdotti = [
   {
     id: 6,
     quantita: 1,
-    nome: "Salmone fresco",
     fornitore: "Pescheria reale",
     nomeProdotto: "Filetto di Salmone Fresco 300gr",
     prezzo: 5.90,
@@ -112,7 +106,6 @@ export const arrayProdotti = [
   {
     id: 7,
     quantita: 1,
-    nome: "Trancio di salmone",
     fornitore: "La pescheria",
     nomeProdotto: "Trancio di Salmone",
     prezzo: 8.60,
@@ -124,7 +117,6 @@ export const arrayProdotti = [
   {
     id: 8,
     quantita: 1,
-    nome: "Avocado",
     fornitore: "Tropico buono",
     nomeProdotto: "Avocado Hass",
     prezzo: 1.49,
@@ -136,7 +128,6 @@ export const arrayProdotti = [
   {
     id: 9,
     quantita: 1,
-    nome: "Birra larger",
     fornitore: "Birrificio Due Ponti",
     nomeProdotto: "Birra larger",
     prezzo: 3.40,
@@ -148,7 +139,6 @@ export const arrayProdotti = [
   {
     id: 10,
     quantita: 1,
-    nome: "Biscotti con goccie al cioccolato",
     fornitore: "Biscotti Bontà",
     nomeProdotto: "Biscotti con Gocce di Cioccolato",
     prezzo: 3.49,
@@ -160,7 +150,6 @@ export const arrayProdotti = [
   {
     id: 11,
     quantita: 1,
-    nome: "Burro",
     fornitore: "Burro Buono",
     nomeProdotto: "Burro Fresco",
     prezzo: 2.99,
@@ -172,7 +161,6 @@ export const arrayProdotti = [
   {
     id: 12,
     quantita: 1,
-    nome: "Cetrioli",
     fornitore: "Campo Vivo",
     nomeProdotto: "Cetrioli Freschi",
     prezzo: 2.99,
@@ -184,7 +172,6 @@ export const arrayProdotti = [
   {
     id: 13,
     quantita: 1,
-    nome: "Cornetti vuoti",
     fornitore: "Forno Alba",
     nomeProdotto: "Cornetti Classici da Forno",
     prezzo: 1.20,
@@ -196,7 +183,6 @@ export const arrayProdotti = [
   {
     id: 14,
     quantita: 1,
-    nome: "Focaccia al pomodoro",
     fornitore: "Forno della Piazza",
     nomeProdotto: "Focaccia Rustica al Pomodoro",
     prezzo: 3.30,
@@ -208,7 +194,6 @@ export const arrayProdotti = [
   {
     id: 15,
     quantita: 1,
-    nome: "Foglie basilico",
     fornitore: "Pesto di Nonna Ada",
     nomeProdotto: "Foglie di Basilico Fresco",
     prezzo: 2.79,
@@ -220,7 +205,6 @@ export const arrayProdotti = [
   {
     id: 16,
     quantita: 1,
-    nome: "Fragole",
     fornitore: "Fragolì",
     nomeProdotto: "Fragole Fresche Selezionate",
     prezzo: 2.49,
@@ -232,7 +216,6 @@ export const arrayProdotti = [
   {
     id: 17,
     quantita: 1,
-    nome: "Frittura calamari",
     fornitore: "Rete del Pescatore",
     nomeProdotto: "Frittura di Calamari",
     prezzo: 8.45,
@@ -244,7 +227,6 @@ export const arrayProdotti = [
   {
     id: 18,
     quantita: 1,
-    nome: "Fusilli bio",
     fornitore: "Grani Gentili",
     nomeProdotto: "Fusilli Bio di Grano Italiano",
     prezzo: 2.49,
@@ -256,7 +238,6 @@ export const arrayProdotti = [
   {
     id: 19,
     quantita: 1,
-    nome: "Gamberi",
     fornitore: "Gambero d'Oro",
     nomeProdotto: "Gamberi Freschi Selezionati",
     prezzo: 6.90,
@@ -268,7 +249,6 @@ export const arrayProdotti = [
   {
     id: 20,
     quantita: 1,
-    nome: "Lattuga",
     fornitore: "Foglia Fresca",
     nomeProdotto: "Lattuga Fresca di Stagione",
     prezzo: 2.19,
@@ -280,7 +260,6 @@ export const arrayProdotti = [
   {
     id: 21,
     quantita: 1,
-    nome: "Maionese",
     fornitore: "Cucina Sincera",
     nomeProdotto: "Maionese Classica",
     prezzo: 2.49,
@@ -292,7 +271,6 @@ export const arrayProdotti = [
   {
     id: 22,
     quantita: 1,
-    nome: "Marmellata fragole",
     fornitore: "Frutti in vasetto",
     nomeProdotto: "Marmellata di Fragole",
     prezzo: 3.20,
@@ -304,7 +282,6 @@ export const arrayProdotti = [
   {
     id: 23,
     quantita: 1,
-    nome: "Melanzane",
     fornitore: "Orto verde",
     nomeProdotto: "Melanzane Fresche di Stagione",
     prezzo: 2.79,
@@ -316,7 +293,6 @@ export const arrayProdotti = [
   {
     id: 24,
     quantita: 1,
-    nome: "Mele golden",
     fornitore: "Fruttaia del sole",
     nomeProdotto: "Mele Golden Croccanti",
     prezzo: 2.49,
@@ -328,7 +304,6 @@ export const arrayProdotti = [
   {
     id: 25,
     quantita: 1,
-    nome: "Orata",
     fornitore: "Pesca blu",
     nomeProdotto: "Orata Fresca",
     prezzo: 7.90,
@@ -340,7 +315,6 @@ export const arrayProdotti = [
   {
     id: 26,
     quantita: 1,
-    nome: "Pane integrale",
     fornitore: "Pane di casa",
     nomeProdotto: "Pane Integrale Rustico",
     prezzo: 2.20,
@@ -352,7 +326,6 @@ export const arrayProdotti = [
   {
     id: 27,
     quantita: 1,
-    nome: "Passata pomodoro bio",
     fornitore: "Sole in bottiglia",
     nomeProdotto: "Passata di Pomodoro Bio",
     prezzo: 2.29,
@@ -364,7 +337,6 @@ export const arrayProdotti = [
   {
     id: 28,
     quantita: 1,
-    nome: "Pesche",
     fornitore: "Orto verde",
     nomeProdotto: "Pesche Fresche di Stagione",
     prezzo: 2.99,
@@ -376,7 +348,6 @@ export const arrayProdotti = [
   {
     id: 29,
     quantita: 1,
-    nome: "Petto pollo",
     fornitore: "Macelleria Rossi",
     nomeProdotto: "Petto di Pollo Fresco",
     prezzo: 5.45,
@@ -388,7 +359,6 @@ export const arrayProdotti = [
   {
     id: 30,
     quantita: 1,
-    nome: "Prosciutto",
     fornitore: "Salumi del borgo",
     nomeProdotto: "Prosciutto Tradizionale",
     prezzo: 1.99,
@@ -400,7 +370,6 @@ export const arrayProdotti = [
   {
     id: 31,
     quantita: 1,
-    nome: "Prosecco",
     fornitore: "Vigne del lago",
     nomeProdotto: "Prosecco Vigne del Lago",
     prezzo: 9.90,
@@ -412,7 +381,6 @@ export const arrayProdotti = [
   {
     id: 32,
     quantita: 1,
-    nome: "Ricotta",
     fornitore: "Latteria fontana",
     nomeProdotto: "Ricotta Fresca",
     prezzo: 2.20,
@@ -424,7 +392,6 @@ export const arrayProdotti = [
   {
     id: 33,
     quantita: 1,
-    nome: "Salame",
     fornitore: "Norcineria valle",
     nomeProdotto: "Salame Tradizionale",
     prezzo: 1.79,
@@ -436,7 +403,6 @@ export const arrayProdotti = [
   {
     id: 34,
     quantita: 1,
-    nome: "Salsiccia",
     fornitore: "La salsiccieria",
     nomeProdotto: "Salsiccia Fresca",
     prezzo: 4.80,
@@ -448,7 +414,6 @@ export const arrayProdotti = [
   {
     id: 35,
     quantita: 1,
-    nome: "Speck",
     fornitore: "Speck di montelupo",
     nomeProdotto: "Speck Stagionato",
     prezzo: 2.29,
@@ -460,7 +425,6 @@ export const arrayProdotti = [
   {
     id: 36,
     quantita: 1,
-    nome: "Uova bio",
     fornitore: "Uova del prato",
     nomeProdotto: "Uova Biologiche Fresche",
     prezzo: 3.49,
@@ -472,7 +436,6 @@ export const arrayProdotti = [
   {
     id: 37,
     quantita: 1,
-    nome: "Yogurt greco",
     fornitore: "Yogurtia",
     nomeProdotto: "Yogurt Greco Cremoso",
     prezzo: 1.49,

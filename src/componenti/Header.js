@@ -24,9 +24,8 @@ export const Header = ({ countCarrello }) => {
       return;
     }
 
-    // confronto con testo inserito con array oggetti prodotti
+    // confronto del testo inserito con i nomi dei prodotti
     const filtrati = arrayProdotti.filter((item) =>
-      item.nome.toLowerCase().includes(valore.toLowerCase()) ||
       item.nomeProdotto.toLowerCase().includes(valore.toLowerCase())
     );
 
@@ -49,7 +48,7 @@ export const Header = ({ countCarrello }) => {
       return;
     } else {
       const risultati = arrayProdotti.filter((item) =>
-        item.nome.toLowerCase().includes(ricerca.toLowerCase()),
+        item.nomeProdotto.toLowerCase().includes(ricerca.toLowerCase()),
       );
 
       navigate("/risultati-ricerca", {
@@ -109,13 +108,13 @@ export const Header = ({ countCarrello }) => {
                       <div
                         className="risultatiRicerca_box flex"
                         key={item.id}
-                        onClick={() => selezionaSuggerimento(item.nome)}
+                        onClick={() => selezionaSuggerimento(item.nomeProdotto)}
                       >
                         <span className="risultatiRicercaBox_icona">
                           <FontAwesomeIcon icon={faSearch} />
                         </span>
                         <span className="risultatiRicercaBox_nome">
-                          {item.nome}
+                          {item.nomeProdotto}
                         </span>
                       </div>
                     ))}

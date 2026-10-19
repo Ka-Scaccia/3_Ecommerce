@@ -37,7 +37,6 @@ export const RisultatiRicerca = ({
       
       risultatiTrovati = arrayProdotti.filter(
         (prodotto) =>
-          prodotto.nome.toLowerCase().includes(queryLower) ||
           prodotto.nomeProdotto.toLowerCase().includes(queryLower) ||
           prodotto.fornitore.toLowerCase().includes(queryLower)
       );
@@ -104,7 +103,7 @@ export const RisultatiRicerca = ({
               {prodotto.img && (
                 <img
                   src={prodotto.img}
-                  alt={`${prodotto.nomeProdotto || prodotto.nome}`}
+                  alt={prodotto.nomeProdotto}
                   className="child_img w100"
                 />
               )}
